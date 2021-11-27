@@ -1324,6 +1324,7 @@
   width: 537px;
   min-height: 563px;
   background-image: none;
+  height: auto;
   margin: -620px 30px 0 auto;
 }
 
@@ -1331,15 +1332,8 @@
   padding: 30px 30px 0;
 }
 
-.u-section-23 .u-text-1 {
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  letter-spacing: 4px;
-  margin: 0 auto;
-}
-
 .u-section-23 .u-product-price-1 {
-  margin: 30px auto 0;
+  margin: 45px auto 0;
 }
 
 .u-section-23 .u-btn-1 {
@@ -1348,6 +1342,12 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 15px auto 0;
+}
+
+.u-section-23 .u-image-2 {
+  width: 238px;
+  height: 83px;
+  margin: 57px auto 0;
 }
 
 @media (max-width: 1199px) {
@@ -1374,8 +1374,8 @@
 
   .u-section-23 .u-group-1 {
     width: 440px;
-    min-height: 441px;
     margin-top: -500px;
+    height: auto;
   }
 }
 
@@ -1401,7 +1401,6 @@
   }
 
   .u-section-23 .u-group-1 {
-    min-height: 352px;
     margin-top: 20px;
     margin-right: initial;
     margin-left: initial;
@@ -1425,7 +1424,6 @@
   }
 
   .u-section-23 .u-group-1 {
-    min-height: 392px;
     width: 350px;
     margin-left: 85px;
     margin-right: 85px;
@@ -1456,19 +1454,14 @@
   }
 
   .u-section-23 .u-group-1 {
-    min-height: 422px;
     width: 320px;
     margin-top: 21px;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .u-section-23 .u-product-price-1 {
-    margin-top: 21px;
-  }
-
   .u-section-23 .u-btn-1 {
-    margin-top: 35px;
+    margin-top: -272px;
   }
 }.u-section-24 .u-sheet-1 {
   min-height: 100px;
