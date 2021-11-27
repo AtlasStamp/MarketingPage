@@ -35226,7 +35226,6 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-icon-4 {
   height: 100%;
-  color: rgb(221, 220, 217) !important;
 }
 @media (max-width: 1199px) {
   .u-header .u-image-1 {
@@ -35243,6 +35242,10 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-icon-1 {
+    color: rgb(221, 220, 217) !important;
+  }
+
+  .u-header .u-icon-4 {
     color: rgb(221, 220, 217) !important;
   }
 }
