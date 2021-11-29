@@ -1372,6 +1372,17 @@
   .u-section-22 .u-sheet-1 {
     min-height: 394px;
   }
+
+  .u-section-22 .u-text-1 {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 63px;
+  }
+
+  .u-section-22 .u-social-icons-1 {
+    margin-right: auto;
+    margin-left: 63px;
+  }
 }
 
 @media (max-width: 767px) {
