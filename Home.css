@@ -996,6 +996,10 @@
   margin: 20px 54px 0 0;
 }
 
+.u-section-19 .embed-responsive-1 {
+  position: absolute;
+}
+
 @media (max-width: 1199px) {
   .u-section-19 .u-sheet-1 {
     min-height: 697px;
