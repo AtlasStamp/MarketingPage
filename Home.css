@@ -482,7 +482,6 @@
   width: 750px;
   min-height: 457px;
   animation-duration: 1000ms;
-  height: auto;
   margin: 255px 17px 38px auto;
 }
 
@@ -509,12 +508,6 @@
 
 .u-section-10 .embed-responsive-1 {
   position: absolute;
-}
-
-@media (max-width: 1199px) {
-  .u-section-10 .u-group-1 {
-    height: auto;
-  }
 }
 
 @media (max-width: 991px) {
@@ -1324,7 +1317,7 @@
 }
 
 .u-section-22 .u-sheet-1 {
-  min-height: 421px;
+  min-height: 397px;
 }
 
 .u-section-22 .u-image-1 {
