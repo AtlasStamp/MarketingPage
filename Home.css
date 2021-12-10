@@ -41,23 +41,29 @@
 }
 
 @media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-bottom: 0;
+  }
+
   .u-section-1 .embed-responsive-1 {
-    height: 1280%;
-    top: -590%;
+    width: 228%;
+    left: -64%;
+    height: 100%;
+    top: 0%;
   }
 }
 
 @media (max-width: 767px) {
   .u-section-1 .embed-responsive-1 {
-    height: 960%;
-    top: -430%;
+    width: 292%;
+    left: -96%;
   }
 }
 
 @media (max-width: 575px) {
   .u-section-1 .embed-responsive-1 {
-    height: 604%;
-    top: -252%;
+    width: 424%;
+    left: -162%;
   }
 }.u-section-2 .u-sheet-1 {
   min-height: 100px;
