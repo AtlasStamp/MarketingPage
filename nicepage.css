@@ -35276,6 +35276,11 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-top: -53px;
   }
 
+  .u-header .u-nav-2 {
+    text-transform: none;
+    font-weight: normal;
+  }
+
   .u-header .u-social-icons-1 {
     margin-top: -29px;
     margin-right: 0;
