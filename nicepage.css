@@ -35240,6 +35240,8 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-nav-2 {
   font-size: 1rem;
+  text-transform: none;
+  font-weight: normal;
 }
 
 .u-header .u-menu-close-1 {
@@ -35274,11 +35276,6 @@ a.u-link.u-text-hover-grey-90:hover {
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
     margin-top: -53px;
-  }
-
-  .u-header .u-nav-2 {
-    text-transform: none;
-    font-weight: normal;
   }
 
   .u-header .u-social-icons-1 {

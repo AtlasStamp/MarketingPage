@@ -34,9 +34,9 @@
 }
 
 .u-section-2 .u-icon-1 {
-  height: 17px;
-  width: 17px;
-  color: rgb(0, 0, 0) !important;
+  height: 27px;
+  width: 27px;
+  background-image: none;
 }
 
 .u-section-2 .u-accordion-pane-1 {
@@ -55,9 +55,9 @@
 }
 
 .u-section-2 .u-icon-2 {
-  height: 17px;
-  width: 17px;
-  color: rgb(0, 0, 0) !important;
+  height: 27px;
+  width: 27px;
+  background-image: none;
 }
 
 .u-section-2 .u-accordion-pane-2 {
@@ -76,9 +76,9 @@
 }
 
 .u-section-2 .u-icon-3 {
-  height: 17px;
-  width: 17px;
-  color: rgb(0, 0, 0) !important;
+  height: 27px;
+  width: 27px;
+  background-image: none;
 }
 
 .u-section-2 .u-accordion-pane-3 {
@@ -88,6 +88,20 @@
 
 .u-section-2 .u-container-layout-3 {
   padding: 20px 30px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-icon-1 {
+    color: rgb(0, 0, 0) !important;
+  }
+
+  .u-section-2 .u-icon-2 {
+    color: rgb(0, 0, 0) !important;
+  }
+
+  .u-section-2 .u-icon-3 {
+    color: rgb(0, 0, 0) !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -198,11 +212,5 @@
 
   .u-section-4 .u-text-1 {
     width: 276px;
-  }
-}
-
-@media (max-width: 575px) {
-  .u-section-4 .u-text-1 {
-    margin-bottom: initial;
   }
 }
