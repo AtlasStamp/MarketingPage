@@ -35242,6 +35242,11 @@ a.u-link.u-text-hover-grey-90:hover {
   font-size: 1rem;
 }
 
+.u-header .u-menu-close-1 {
+  margin-top: 106px;
+  margin-bottom: 0;
+}
+
 .u-header .u-social-icons-1 {
   white-space: nowrap;
   height: 26px;
@@ -35329,6 +35334,14 @@ a.u-link.u-text-hover-grey-90:hover {
   .u-header .u-menu-1 {
     margin-top: -65px;
     margin-right: 14px;
+  }
+
+  .u-header .u-nav-2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 145px;
+    height: 366px;
+    margin: 20px auto 0 51px;
   }
 
   .u-header .u-social-icons-1 {
