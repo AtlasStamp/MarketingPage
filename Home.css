@@ -42,37 +42,29 @@
   }
 
   .u-section-1 .embed-responsive-1 {
-    width: 292%;
-    left: -96%;
-    height: 100%;
-    top: 0%;
+    height: 960%;
+    top: -430%;
   }
 }
 
 @media (max-width: 575px) {
   .u-section-1 .embed-responsive-1 {
-    width: 424%;
-    left: -162%;
+    height: 604%;
+    top: -252%;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 1026px;
+  min-height: 1414px;
+}
+
+.u-section-2 .u-image-1 {
+  height: 426px;
+  margin-bottom: 0;
+  margin-top: 34px;
 }
 
 .u-section-2 .u-text-1 {
   font-size: 1.5rem;
-  text-align: left;
-  margin: 107px 0 0;
-}
-
-.u-section-2 .u-text-2 {
-  font-size: 1.5rem;
-  margin: 120px 0 0;
-}
-
-.u-section-2 .u-text-3 {
-  font-size: 1.5rem;
-  text-align: left;
-  margin: 120px 0 34px;
+  margin: 97px 0 59px;
 }.u-section-3 .u-sheet-1 {
   min-height: 750px;
 }
