@@ -53,18 +53,18 @@
     top: -252%;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 1414px;
+  min-height: 100vh;
 }
 
 .u-section-2 .u-image-1 {
   height: 426px;
   margin-bottom: 0;
-  margin-top: 34px;
+  margin-top: 135px;
 }
 
 .u-section-2 .u-text-1 {
-  font-size: 1.5rem;
-  margin: 97px 0 59px;
+  font-size: 1.25rem;
+  margin: 152px 0 0;
 }.u-section-3 .u-sheet-1 {
   min-height: 750px;
 }
