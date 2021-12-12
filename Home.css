@@ -10,11 +10,11 @@
 .u-section-1 .u-text-1 {
   letter-spacing: 5px;
   background-image: none;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 1.6;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 688px auto 60px;
+  margin: 779px auto 60px;
 }.u-section-2 .u-sheet-1 {
   min-height: 100vh;
 }
@@ -28,6 +28,12 @@
 .u-section-2 .u-text-1 {
   font-size: 1.25rem;
   margin: 89px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-text-1 {
+    line-height: 32px;
+  }
 }.u-section-3 .u-sheet-1 {
   min-height: 750px;
 }
