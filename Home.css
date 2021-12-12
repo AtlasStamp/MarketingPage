@@ -9,7 +9,7 @@
   animation-duration: 1000ms;
   letter-spacing: 7px;
   line-height: 1.6;
-  margin: 497px auto 60px;
+  margin: 841px auto 60px;
 }
 
 .u-section-1 .embed-responsive-1 {
@@ -55,7 +55,24 @@
     left: -162%;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 100px;
+  min-height: 1026px;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 107px 0 0;
+}
+
+.u-section-2 .u-text-2 {
+  font-size: 1.5rem;
+  margin: 120px 0 0;
+}
+
+.u-section-2 .u-text-3 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 120px 0 34px;
 }.u-section-3 .u-sheet-1 {
   min-height: 750px;
 }
