@@ -784,11 +784,18 @@
       var urlParams = new URLSearchParams(QueryString);
       var from = urlParams.get("from");
 
-      fetch("https://terrainstamper.biddydev.com/api/users/userfrom", {
-        body: JSON.stringify({ from }),
-        method: "POST",
-        headers: new Headers({ "content-type": "application/json" }),
-      }).catch(console.error);
+      if (from) {
+        fetch("https://terrainstamper.biddydev.com/api/users/userfrom", {
+          body: JSON.stringify({ from }),
+          method: "POST",
+          headers: new Headers({ "content-type": "application/json" }),
+        })
+          .then(() => {
+            const builtUrl = window.location.host;
+            window.location.replace(window.location.origin);
+          })
+          .catch(console.error);
+      }
     </script>
   </body>
 </html>
