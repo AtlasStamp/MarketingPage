@@ -784,20 +784,11 @@
       var urlParams = new URLSearchParams(QueryString);
       var from = urlParams.get("from");
 
-      fetch("https://backend.atlasterrain.com/api/users/userfrom", {
-        body: { from },
+      fetch("https://terrainstamper.biddydev.com/api/users/userfrom", {
+        body: JSON.stringify({ from }),
         method: "POST",
+        headers: new Headers({ "content-type": "application/json" }),
       }).catch(console.error);
-
-      //   var xhr = new XMLHttpRequest();
-      //   xhr.open(
-      //     "POST",
-      //     "https://backend.atlasterrain.com/api/users/userfrom",
-      //     true
-      //   );
-      //   xhr.setRequestHeader("Content-Type", "application/json");
-      //   xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-      //   xhr.send(JSON.stringify({ from: from }));
     </script>
   </body>
 </html>
