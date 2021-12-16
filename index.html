@@ -248,7 +248,9 @@
         justify-content: center;
         align-items: center;
         padding: 100px 10%;
-        background-color: black;
+        background-color: black;    
+        display: flex;
+        flex-direction: column;
       }
 
       footer img {
@@ -404,6 +406,74 @@
         animation: downer 10s linear;
         opacity: 0;
       }
+
+      .mailboxcontainer {
+        position: relative;
+      }
+
+      .mailbox {
+        text-align: center;
+      }
+
+      .mailboxwrap {
+        padding: 5% 25px;
+        padding-top: 0px;
+      }
+
+      .mailboxstate {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 50px;
+        left:50%;
+        transform: translateX(-50%);
+        width: 300px;
+        margin-top: 25px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .mailfield {
+
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px 25px;
+        min-width: 350px;
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        color: white;
+
+      }
+
+      .mailfield:hover {
+        border-color: rgb(172, 172, 172);
+      }
+
+      input.mailfield:-webkit-autofill {
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: white !important;       
+      }
+
+      .mailsubmit {
+        
+        cursor: pointer;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 10px 50px;
+        background-color: white;
+        transition: 0.3s;
+        margin: 10px;
+
+      }
+
+      .mailsubmit:hover {
+        background-color: rgb(177, 177, 177);
+      }
+
     </style>
   </head>
   <body>
@@ -499,6 +569,7 @@
           >unity thread</a
         >
       </h1>
+
     </section>
     <section>
       <div class="row noselect">
@@ -633,6 +704,7 @@
       </div>
     </section>
     <footer>
+      
       <div class="socials noselect">
         <a
           class="social fab fa-discord"
@@ -655,13 +727,26 @@
           target="_blank"
         ></a>
       </div>
-      <h5 class="noselect nocookie">
-        <i class="fas fa-cookie-bite" style="margin-right: 10px"></i>we do not
-        use cookies<i
-          class="fas fa-laugh-beam"
-          style="margin-left: 10px; margin-right: 20px"
-        ></i>
-      </h5>
+
+      
+      <div class="mailboxwrap">
+        <p style="text-align: center; margin-bottom: 30px;"><i class="fas fa-envelope" style="margin-right: 15px; color:white;"></i>Leave your email to get notified on releases and updates!</p>
+        <div class="mailboxcontainer">
+          <div id="mailboxinput" class="mailbox">
+            <input id="mail" type="email" class="mailfield" name="email" autocomplete="on" width="0" required>
+            <input id="submit" type="button" class="mailsubmit" value="Notify me">
+          </div>
+          <div id="mailboxerror" class="mailboxstate">
+            <b id="errortext" style="text-align: inherit; color:rgb(255, 22, 53);"></b>
+          </div>
+          <div id="mailboxsucces" class="mailboxstate">
+            <b style="text-align: inherit;">You got it<i class="fas fa-laugh-beam" style="margin-left: 15px;"></i></b>
+          </div>
+        </div>
+      </div>
+      
+      <h5 class="noselect nocookie"><i class="fas fa-cookie-bite" style="margin-right: 10px"></i>we do not use cookies</h5>
+
     </footer>
     <div id="modal" class="modal noselect">
       <img class="modal-content" id="modalImage" draggable="false" />
@@ -676,23 +761,28 @@
     </div>
     <i class="down fas fa-chevron-down"></i>
     <script type="text/javascript">
-      var modal = document.getElementById("modal");
 
-      var modalImage = document.getElementById("modalImage");
+      //pictures!!
 
-      var modalCaption = document.getElementById("modalCaption");
+      const modal = document.getElementById("modal");
 
-      var galleryImages = document.getElementsByClassName("gi");
+      const modalImage = document.getElementById("modalImage");
 
-      var currentIndex = -1;
+      const modalCaption = document.getElementById("modalCaption");
 
-      for (var i = 0; i < galleryImages.length; i++) {
-        var galleryImage = galleryImages[i];
+      const galleryImages = document.getElementsByClassName("gi");
+
+      let currentIndex = -1;
+
+      for (let i = 0; i < galleryImages.length; i++) {
+
+        let galleryImage = galleryImages[i];
 
         galleryImage.onclick = function (e) {
-          var index = -1;
 
-          for (var i = 0; i < galleryImages.length; i++) {
+          let index = -1;
+
+          for (let i = 0; i < galleryImages.length; i++) {
             if (galleryImages[i] == e.target) {
               index = i;
 
@@ -703,45 +793,55 @@
           currentIndex = index;
 
           Render();
+
         };
+
       }
 
-      var buttonLeft = document.getElementById("modalleft");
+      const buttonLeft = document.getElementById("modalleft");
 
       buttonLeft.onclick = function () {
+
         currentIndex--;
 
         if (currentIndex < 0) {
+
           currentIndex = galleryImages.length - 1;
+
         }
 
         Render();
+
       };
 
-      var buttonRight = document.getElementById("modalright");
+      const buttonRight = document.getElementById("modalright");
 
       buttonRight.onclick = function () {
+
         currentIndex++;
 
         if (currentIndex >= galleryImages.length) {
+
           currentIndex = 0;
+
         }
 
         Render();
+
       };
 
-      var span = document.getElementsByClassName("close")[0];
+      const span = document.getElementsByClassName("close")[0];
 
       span.onclick = function () {
+
         modal.style.display = "none";
+
       };
 
       function Render() {
-        if (
-          currentIndex >= 0 &&
-          currentIndex < galleryImages.length &&
-          galleryImages[currentIndex] != null
-        ) {
+
+        if ( currentIndex >= 0 && currentIndex < galleryImages.length && galleryImages[currentIndex] != null ) {
+
           modal.style.display = "block";
 
           modalImage.style.transitionDuration = "0s";
@@ -754,49 +854,146 @@
             modalImage.style.transitionDuration = "0.3s";
             modalImage.style.opacity = 1;
           }, 1);
+
         } else {
+
           modal.style.display = "none";
+
         }
+
       }
 
       window.onload = function () {
+
         document.body.style.transitionDuration = "0s";
         document.body.style.opacity = 0;
 
         setTimeout(() => {
+
           document.body.style.transitionDuration = "1s";
           document.body.style.opacity = 1;
 
-          var title = document.getElementsByClassName("title")[0];
+          let title = document.getElementsByClassName("title")[0];
 
           title.style.transitionDuration = "0s";
           title.style.opacity = 0;
           title.style.letterSpacing = "16px";
 
           setTimeout(() => {
+
             title.style.transitionDuration = "1s";
             title.style.opacity = 1;
             title.style.letterSpacing = null;
+
           }, 100);
+
         }, 1);
+
       };
 
-      var QueryString = window.location.search;
-      var urlParams = new URLSearchParams(QueryString);
-      var from = urlParams.get("from");
+
+      //from where?
+
+      let QueryString = window.location.search;
+      let urlParams = new URLSearchParams(QueryString);
+      let from = urlParams.get("from");
 
       if (from) {
-        fetch("https://terrainstamper.biddydev.com/api/users/userfrom", {
+
+        fetch("https://backend.atlasterrain.com/api/users/userfrom", {
+
           body: JSON.stringify({ from }),
           method: "POST",
           headers: new Headers({ "content-type": "application/json" }),
-        })
-          .then(() => {
-            const builtUrl = window.location.host;
-            window.location.replace(window.location.origin);
-          })
-          .catch(console.error);
+
+        }).then(() => {
+
+          const builtUrl = window.location.host;
+          window.location.replace(window.location.origin);
+
+        }).catch(console.error);
+
       }
+
+
+      //mail box yeee
+
+      const mail = document.getElementById("mail")
+      const submit = document.getElementById("submit")
+      const mailboxinput = document.getElementById("mailboxinput")
+      const mailboxerror = document.getElementById("mailboxerror")
+      const mailboxsucces = document.getElementById("mailboxsucces")
+      const errortext = document.getElementById("errortext")
+
+      submit.onclick = function() {
+
+        submit.style.pointerEvents = "none"
+        submit.style.opacity = 0.25
+
+        let mailstring = mail.value;
+
+        if( mail.checkValidity() == false) {
+
+          SumbitError("Hmmm this is not an email.")
+
+          return
+
+        }
+
+        fetch("https://backend.atlasterrain.com/api/newsletter/subscribe", {
+
+          body: JSON.stringify({ email: mailstring }),
+          method: "POST",
+          headers: new Headers({ "content-type": "application/json" }),
+
+        }).then(() => {
+          
+          mailboxerror.style.display = "none"
+
+          mailboxsucces.style.display = "block"
+          
+          FadeIn(mailboxsucces)
+          
+        }).catch(()=>{
+
+          SumbitError("Looks like we are in trouble, try again later.</i>")
+
+        })
+
+      }
+
+      function SumbitError(error) {
+
+        mailboxerror.style.display = "block"
+        
+        errortext.innerHTML = error
+
+        FadeIn(mailboxerror)
+          
+        setTimeout(()=>{
+
+          submit.style.pointerEvents = "all"
+          submit.style.opacity = 1
+          mailboxerror.style.opacity = 0.5
+
+        },3000)
+
+      }
+
+      function FadeIn(el) {
+
+        el.style.transitionDuration = "0s"
+        el.style.opacity = 0
+
+        setTimeout(()=>{
+
+          el.style.transitionDuration = "1s"
+          el.style.opacity = 1
+
+        },10)
+
+      }
+
     </script>
   </body>
 </html>
