@@ -404,6 +404,57 @@
         animation: downer 10s linear;
         opacity: 0;
       }
+
+      .mailbox {
+        text-align: center;
+      }
+
+      .mailboxstate {
+        margin-top: 25px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .mailfield {
+
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px 25px;
+        min-width: 350px;
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        color: white;
+
+      }
+
+      .mailfield:hover {
+        border-color: rgb(172, 172, 172);
+      }
+
+      input.mailfield:-webkit-autofill {
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: white !important;       
+      }
+
+      .mailsubmit {
+        
+        cursor: pointer;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 10px 50px;
+        background-color: white;
+        transition: 0.3s;
+
+      }
+
+      .mailsubmit:hover {
+        background-color: rgb(177, 177, 177);
+      }
+
     </style>
   </head>
   <body>
@@ -499,6 +550,34 @@
           >unity thread</a
         >
       </h1>
+
+    </section>
+    <section style="background-color: black;">
+
+      <div class="txtwrap">
+
+        <p style="text-align: center; margin-bottom: 30px;"><i class="fas fa-envelope" style="margin-right: 15px; color:white;"></i>Get notified on releases and updates!</p>
+        
+        <div>
+
+          <div id="mailboxinput" class="mailbox">
+            <input id="mail" type="email" class="mailfield" name="email" autocomplete="on" width="0" required>
+            <input id="submit" type="button" class="mailsubmit" value="Submit">
+          </div>
+
+          <div id="mailboxerror" class="mailboxstate" style="display: none; opacity: 0;">
+            <b id="errortext" style="text-align: inherit; color:rgb(255, 145, 0);"></b>
+          </div>
+
+          <div id="mailboxsucces" class="mailboxstate" style="display: none;">
+            <b style="text-align: inherit;">You got it<i class="fas fa-laugh-wink" style="margin-left: 15px;"></i></b>
+          </div>
+
+        </div>
+
+      </div>
+      
+
     </section>
     <section>
       <div class="row noselect">
@@ -676,6 +755,9 @@
     </div>
     <i class="down fas fa-chevron-down"></i>
     <script type="text/javascript">
+
+      //pictures!!
+      
       var modal = document.getElementById("modal");
 
       var modalImage = document.getElementById("modalImage");
@@ -781,22 +863,85 @@
         }, 1);
       };
 
+
+      //from where?
+
       var QueryString = window.location.search;
       var urlParams = new URLSearchParams(QueryString);
       var from = urlParams.get("from");
 
       if (from) {
-        fetch("https://terrainstamper.biddydev.com/api/users/userfrom", {
+        fetch("https://backend.atlasterrain.com/api/users/userfrom", {
           body: JSON.stringify({ from }),
           method: "POST",
           headers: new Headers({ "content-type": "application/json" }),
-        })
-          .then(() => {
-            const builtUrl = window.location.host;
-            window.location.replace(window.location.origin);
-          })
-          .catch(console.error);
+        }).then(() => {
+          const builtUrl = window.location.host;
+          window.location.replace(window.location.origin);
+        }).catch(console.error);
       }
+
+
+      //mail box yeee
+
+      var mail = document.getElementById("mail")
+      var submit = document.getElementById("submit")
+      var mailboxinput = document.getElementById("mailboxinput")
+      var mailboxerror = document.getElementById("mailboxerror")
+      var mailboxsucces = document.getElementById("mailboxsucces")
+      var errortext = document.getElementById("errortext")
+
+      submit.onclick = function() {
+
+        submit.style.pointerEvents = "none"
+        submit.style.opacity = 0.25
+
+        var mailstring = mail.value;
+
+        if( mail.checkValidity() == false) {
+
+          SumbitError("This is not an email bud.<i class='far fa-grin-beam-sweat' style='margin-left:15px; color:white;'></i>")
+
+          return
+
+        }
+
+        fetch("https://backend.atlasterrain.com/api/newsletter/subscribe", {
+
+          body: JSON.stringify({ email: mailstring }),
+          method: "POST",
+          headers: new Headers({ "content-type": "application/json" }),
+
+        }).then(() => {
+          
+          mailboxerror.style.display = "none"
+
+          mailboxsucces.style.display = "block"
+          mailboxsucces.style.opacity = 1
+
+        }).catch(()=>{
+
+          SumbitError("Looks like we are in trouble, try again later.<i class='far fa-grimace' style='margin-left:15px; color:white;'></i>")
+
+        })
+
+      }
+
+      function SumbitError(error) {
+
+        mailboxerror.style.display = "block"
+        mailboxerror.style.opacity = 1
+        errortext.innerHTML = error
+
+        setTimeout(()=>{
+
+          submit.style.pointerEvents = "all"
+          submit.style.opacity = 1
+          mailboxerror.style.opacity = 0.5
+
+        },3000)
+      }
+
     </script>
   </body>
 </html>
