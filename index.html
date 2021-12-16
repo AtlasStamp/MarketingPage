@@ -566,7 +566,7 @@
           </div>
 
           <div id="mailboxerror" class="mailboxstate" style="display: none; opacity: 0;">
-            <b id="errortext" style="text-align: inherit; color:rgb(255, 145, 0);"></b>
+            <b id="errortext" style="text-align: inherit; color:rgb(255, 72, 0);"></b>
           </div>
 
           <div id="mailboxsucces" class="mailboxstate" style="display: none;">
@@ -757,7 +757,7 @@
     <script type="text/javascript">
 
       //pictures!!
-      
+
       var modal = document.getElementById("modal");
 
       var modalImage = document.getElementById("modalImage");
@@ -917,8 +917,9 @@
           mailboxerror.style.display = "none"
 
           mailboxsucces.style.display = "block"
-          mailboxsucces.style.opacity = 1
-
+          
+          FadeIn(mailboxsucces)
+          
         }).catch(()=>{
 
           SumbitError("Looks like we are in trouble, try again later.<i class='far fa-grimace' style='margin-left:15px; color:white;'></i>")
@@ -930,9 +931,11 @@
       function SumbitError(error) {
 
         mailboxerror.style.display = "block"
-        mailboxerror.style.opacity = 1
+        
         errortext.innerHTML = error
 
+        FadeIn(mailboxerror)
+          
         setTimeout(()=>{
 
           submit.style.pointerEvents = "all"
@@ -940,6 +943,16 @@
           mailboxerror.style.opacity = 0.5
 
         },3000)
+      }
+
+      function FadeIn(el) {
+        el.style.transitionDuration = "0s"
+        el.style.opacity = 0
+
+        setTimeout(()=>{
+          el.style.transitionDuration = "0.3s"
+          el.style.opacity = 1
+        },1)
       }
 
     </script>
