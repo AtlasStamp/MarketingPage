@@ -21,6 +21,14 @@ function setPricePoint(parent) {
   const randomPrice = setPrices[Math.floor(Math.random() * setPrices.length)];
   el.innerText = `Buy now: $${randomPrice}`;
   el.onclick = () => {
+    fetch('https://backend.atlasterrain.com/api/analytics/price', {
+      method: 'POST',
+      body: JSON.stringify({ price: randomPrice }),
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+    })
+      .then(() => {})
+      .catch(console.error);
+
     parent.removeChild(el);
     parent.appendChild(completedPurchase);
   };
