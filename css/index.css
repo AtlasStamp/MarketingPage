@@ -1,0 +1,302 @@
+@import url('./purchaseAtlas.css');
+@import url('./mailbox.css');
+@import url('./modal.css');
+
+@keyframes blink {
+  0% {
+    transform: translateY(0px);
+  }
+  95% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes downer {
+  0% {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(60px);
+    opacity: 0;
+  }
+}
+
+html {
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  opacity: 0;
+  background-color: rgb(6, 6, 6);
+  color: white;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  transition: 10s ease-out;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+section {
+  position: relative;
+  padding: 100px 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 50px 2%;
+  }
+}
+
+section:nth-child(1) {
+  padding: 0;
+}
+
+b {
+  color: white;
+}
+
+p {
+  color: rgb(167 167 167);
+  text-align: justify;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgb(0, 78, 151);
+}
+
+.title {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+  font-size: 19px;
+  letter-spacing: 6px;
+  opacity: 0;
+  transition: 3s ease-out;
+}
+
+@media only screen and (max-width: 800px) {
+  .title {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .title {
+    display: none;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.blinker {
+  animation: blink 3s linear infinite;
+}
+
+.imgwrap {
+  border: 1px dashed white;
+  padding: 15px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.txtwrap {
+  padding: 5% 25px;
+}
+
+.imgwrap img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0;
+}
+
+.column img {
+  margin: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.gi {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+
+.gi:hover,
+.go:focus {
+  filter: brightness(120%);
+  transform: translateX(-3px) translateY(-3px);
+  z-index: 1;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+footer img {
+  width: 150px;
+  height: 150px;
+  margin-right: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+  footer img {
+    width: 100px;
+    height: 100px;
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer img {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+  }
+}
+
+.socials {
+  display: flex;
+}
+
+.social {
+  padding: 30px;
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+}
+
+.social:hover {
+  color: rgb(163, 163, 163);
+}
+
+@media only screen and (max-width: 800px) {
+  .social {
+    font-size: 25px;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .social {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+.nocookie {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  bottom: 10px;
+  opacity: 0.3;
+}
+
+.down {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  pointer-events: none;
+  animation: downer 10s linear;
+  opacity: 0;
+}

@@ -1,0 +1,25 @@
+section.purchase-atlas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #093050;
+}
+section.purchase-atlas button#purchase-cta {
+  background: goldenrod;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: calc(3rem / calc(16 / 9)) 3rem;
+  font-size: 1.5rem;
+  transition: 0.125s ease-in-out all;
+  box-shadow: 0rem 0rem 0rem 0rem transparent;
+}
+section.purchase-atlas button#purchase-cta:hover {
+  background: gold;
+  box-shadow: 0rem 0rem 0.5rem 0rem goldenrod;
+}
+section.purchase-atlas button#purchase-cta:active {
+  background: grey;
+  box-shadow: 0rem 0rem 0.5rem 0rem goldenrod;
+}
