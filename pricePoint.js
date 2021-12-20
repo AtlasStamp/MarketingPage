@@ -4,7 +4,7 @@ const sorryText =
 
 /**
  * Sets the price point to a random point for analytics purposes
- * @param {HTMLScriptElement} parent - The HTML Section that hold the HTMLButtonElement
+ * @param {HTMLSectionElement} parent - The HTML Section that hold the HTMLButtonElement
  */
 function setPricePoint(parent) {
   if (!parent) {
