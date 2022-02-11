@@ -69,16 +69,16 @@
 
       body {
         opacity: 0;
-        background-color: rgb(6, 6, 6);
+        transition: 10s ease-out;
+        background-color: rgb(8, 8, 8);
         color: white;
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         line-height: 30px;
-        transition: 10s ease-out;
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 800px) {
         body {
           font-size: 15px;
           line-height: 25px;
@@ -87,10 +87,10 @@
 
       section {
         position: relative;
-        padding: 100px 10%;
+        padding: 100px 20%;
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 800px) {
         section {
           padding: 50px 2%;
         }
@@ -106,17 +106,24 @@
 
       p {
         color: rgb(167 167 167);
-        text-align: justify;
       }
 
       h1 {
-        text-transform: uppercase;
         font-weight: normal;
         font-size: 28px;
         line-height: 35px;
+        margin-bottom: 75px;
+        margin-top: 0;
       }
 
-      @media only screen and (max-width: 600px) {
+      h2 {
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 35px;
+        text-transform: uppercase;
+      }
+
+      @media only screen and (max-width: 800px) {
         h1 {
           font-size: 20px;
           line-height: 30px;
@@ -145,6 +152,7 @@
         letter-spacing: 6px;
         opacity: 0;
         transition: 3s ease-out;
+        text-transform: uppercase;
       }
 
       @media only screen and (max-width: 800px) {
@@ -174,7 +182,7 @@
       }
 
       .imgwrap {
-        border: 1px dashed white;
+        border: 1px solid #ffffff2e;
         padding: 15px;
         padding-bottom: 10px;
         border-radius: 10px;
@@ -182,6 +190,7 @@
 
       .txtwrap {
         padding: 5% 25px;
+        padding-top: 0;
       }
 
       .imgwrap img {
@@ -307,13 +316,13 @@
         text-align: center;
         width: 100%;
         bottom: 10px;
-        opacity: 0.3;
+        color:rgb(59, 59, 59);
       }
 
       .modal {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 20;
         left: 0;
         top: 0;
         width: 100%;
@@ -448,6 +457,7 @@
       }
 
       input.mailfield:-webkit-autofill {
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: white !important;
       }
@@ -467,65 +477,334 @@
       .mailsubmit:hover {
         background-color: rgb(177, 177, 177);
       }
+
+      .sidebyside {
+        align-items: center;
+        padding-top: 0px;
+        padding-bottom: 100px;
+      }
+
+      @media only screen and (max-width: 1700px) {
+        .mwl {
+          display: none;
+        }
+      }
+
+      .fade {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, black 1%, transparent 20%);
+      }
+
+
+      /*main nav*/
+
+      .mainnav {
+        position: fixed;
+        width: 100%;
+        height: 75px;
+        background-color: #000000ed;
+        display: flex;
+        z-index: 10;
+        justify-content: end;
+        border-bottom: 1px solid rgb(66, 66, 66);
+        top: 0;
+        font-size: 20px;
+      }
+
+      .navhome {
+        width: 75px;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .navhome:hover {
+        filter: brightness(80%);
+      }
+
+      .navitem {
+        padding: 25px;
+        align-self: center;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 0px 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .navitem:hover {
+        color: gray;
+      }
+
+      a.navitem  {
+        color:white;
+      }
+
+      .main-section, .nav {
+        margin-top: 75px;            
+      }
+
+      @media only screen and (max-width: 800px) {
+        .navitem {
+          font-size: 12px;
+          letter-spacing: 0px;
+          margin: 0px 0px;
+          padding: 25px 10px;
+        }
+      }
+
+      /*---*/
+
     </style>
   </head>
   <body>
-    <section>
-      <img src="Images/Atlas Next Gen Terrain Editor For Unity Thumbnail.png" style="width: 100%" draggable="false" />
-      <h1 class="title noselect"><b>next gen terrain editor</b> for unity</h1>
-    </section>
-    <section>
-      <div class="imgwrap">
-        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 1.png" draggable="false" />
-      </div>
 
+    <div class="mainnav">
+      <a class="navitem navhome" href="#section1"></i>Home</a>
+      <a class="navitem" href="#section1-2">Trailer</a>
+      <a class="navitem" href="#section2">Features</a>
+      <a class="navitem" href="#section3">Gallery</a>
+      <a class="navitem" href="docs.html">Documentation</a>
+    </div>
+
+    <section style="background-color: black; padding: 0;" id="section1">
+      <img src="Images/Atlas Next Gen Terrain Editor For Unity Thumbnail.png" style="width: 100%" draggable="false"></img>
+      <h1 class="title noselect"><b>next gen terrain editor</b> for unity</h1>
+      <div class="fade"></div>
+    </section>
+
+    <!---trailer-->
+    <section style="background-color: black;" id="section1-2">
       <div class="txtwrap">
-        <p><b>Hi and welcome to Atlas.</b><b class="fas fa-grin-beam" style="margin-left: 10px"></b></p>
+        <h1>Hi and Welcome To Atlas.</h1>
         <p>
-          We all know how much Unity is running behind on its terrain and how challenging it is to create vast, good
-          looking worlds.
-        </p>
-        <p>
-          We strongly believe that the future of terrain editing lies in a non destructive object based workflow. As
-          unity veterans we have been working on a <b>next gen terrain editor</b> that combines the brushed and
+          We strongly believe the future of terrain editing lies in a non destructive object based workflow. As
+          long-time unity users we have been working on a <b>next gen terrain editor</b> that combines the brushed and
           generative workflows into the perfect hybrid. Having both these workflows operating inside a non destructive
           object based system allows us to overcome the shortcomings that these techniques have on their own.
         </p>
-        <p>
-          Where a purely generative technique can be tedious to make specific smaller changes, a purely brushed
-          technique just sounds like slavery. On top of that not having objects requires either a node based editor or
-          some other stackable list that rapidly increases complexity and is challenging to maintain.
-        </p>
-        <p>
-          To make Atlas accessible to all Unity users we built it as if it comes from Unity developers themselves and
-          kept its flow as close to default Unity as possible. We believe that this is a tool that many of us are
-          looking for and that it can fill the lack of proper terrain support Unity is currently struggling with.
-        </p>
-        <p>
-          In coming days and weeks we will be sharing more information on this site and our Unity thread. If you have
-          any questions feel free to ask them there.
-        </p>
+      </div>
+      <div class="imgwrap" style="position:relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+        <iframe style="position: absolute; top: 15px; left: 15px; width: calc( 100% - 30px); height: calc( 100% - 30px); border: none;" src="https://www.youtube-nocookie.com/embed/0bcf-pDEqzg"></iframe>
+      </div>
+    </section>
+
+    <!---stamps-->
+    <section id="section2">
+      <div class="txtwrap">
+        <h1>Stamps</h1>
+        <p>A Stamp in Atlas is a bundle of textures that articulates a piece of terrain, it includes heightmap data and a range of masks that you can use for your splatmaps. The Stamp lives on a regular GameObject wich means you can <b>move / rotate and scale</b> them just like any other GameObject.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 1.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!---custom stamps-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+      <h1>Custom Stamps</h1>
+        <p>It's easy to create your own <b>stamp assets</b>, You can use textures from the stamps that we provide or generate your own using your favorite terrain generator or perhaps you are looking to use satelite data. Its all possible since the stamps only require atleast a heightmap to work.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 2.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!---realtime editing-->
+    <section>
+      <div class="txtwrap">
+        <h1>Realtime Editing</h1>
+        <p>Realtime editing is done within a preview box, the box acts as a camera that sees your stamps, renders them and lets you see the result as a terrain. Rendering is done on the <b>GPU</b> and it uses an underlying unity terrain to display the result, this means collision and splatmaps work while editing in realtime.</p>
+        <p>Additionaly you can turn the preview box on and off on demand so you can save resources while not editing your terrain.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 3.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!---blend modes-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+        <h1>Blend Modes</h1>
+        <p>Roads should probably make the height go towards the spline at all times. Mountains on the other hand should most likely punsh trough the heightmap and craters should probably only lower the height of your terrain.</p>
+        <p>This logic is handled trough blend modes and we got 5 modes to choose from.</p>
+        <ul>
+          <li>Blend: moves the height towards the target height</li>
+          <li>Max: the maximum height wins</li>
+          <li>Min: the minimum height wins</li>
+          <li>Add: adds height</li>
+          <li>Sub: subtracts height</li>
+        </ul>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 5.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!---splatmap-->
+    <section>
+      <div class="txtwrap">
+        <h1>Splatmaps</h1>
+        <p>Atlas comes with full splatmap control, each stamp contains multiple masks that you can use to compose your splatmaps, these masks can range from <b>Erosion</b> to <b>Slope</b> and <b>curvature</b> or anything else this stamp wants to express.</p>
+        <p>You can add as many layers as you want that write to your splatmap, each layer can be tweaked to your liking, wich means you can filter out a specific section of slope and increase the sharpness of your erosion lines.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 6.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--mask painting-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+        <h1>Mask painting</h1>
+        <p>In Atlas you can <b>brush</b> the opacity of your stamps. This is espacially handy when you want to isolate a specific piece out of a stamp or when you need to make a couple of stamps fit better. You can always revert back to the previous mask or jump back to the original mask, so feel free to make a mess, no harm done.<i class="fas fa-laugh-beam" style="margin-left: 10px; color:white;"></i></p>
+        <p>In short mask painting is here to cover your back in tricky situations.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 7.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--stamps as prefabs-->
+    <section>
+      <div class="txtwrap">
+        <h1>Stamps as Prefabs</h1>
+        <p>Stamps in Atlas are regular GameObjects and as you would expect you can drag them to your project panel and turn them into a prefab.</p>
+        <p>This allows you to <b>structure</b> the way your level is built, you can group stamps, combine stamps with other prefabs like buildings or lakes and most importantly <b>re-use</b> the things you build troughout your project.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 8.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--splines-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+        <h1>Splines</h1>
+        <p>Atlas would not be complete without spline support. The spline stamp provides the same functionaly as regular stamps, the only difference is that the stamp will now be orientated as a spline instead of a square.</p>
+        <p>Consider using spline stamps to build road networks, rivers, ridges, coast lines, or cliffs. Its all possible and can be real powerfull wen used correctly.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 9.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--spline to mesh-->
+    <section>
+      <div class="txtwrap">
+        <h1>Spline to Mesh</h1>
+        <p>Atlas can generate a mesh from your spline, use this to create your road meshes and/or river meshes.</p>
+        <p>The settings you export the mesh with can be tweaked seperatly, for rivers you want your mesh to be a little wider than the stamp itself, or for roads you want a small height offset or other tiling values.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 10.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--apply to unity terrain-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+        <h1>Apply to Unity Terrain</h1>
+        <p>Atlas applies straight onto unity terrain, each terrain will render at full resolution. You can use as many terrains as you like and they dont need to share thesame settings. Atlas will automatically render <b>seamless</b> when your terrains are placed next to eachother, stiching is not required.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 11.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--export textures-->
+    <section>
+      <div class="txtwrap">
+        <h1>Exporting textures</h1>
+        <p>To make Atlas ready for the future it provides you with extra textures you can export for more advanced terrain solutions.</p>
+        <ul>
+          <li>Heightmap (32bit)</li>
+          <li>16 splatmaps</li>
+          <li>global color map</li>
+          <li>global normal map</li>
+        </ul>
+        <p>These should provide enough information to articulate pretty mush any terrain that is heightmap based.</p>
+        <p>Where a global color map can give huge improvements of the uniqueness your terrain can express to a global normalmap that will make your terrain look sharp and crisp from far away.</p>
+        <p>Atlas also provides up to 16 splatmaps if your terrain shader supports it.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 12.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--scattering-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+        <h1>Scattering</h1>
+        <p>Atlas comes with a basic scattering system where each terrain holds a list of <b>scatter rules.</b></p>
+        <p>Each scatter rule can be a biome like palm trees on a beach or a dense pine forest and can be filtered using a target splatmap, range sliders for height and slope and an ignore tag.</p>
+        <p>Scattering is <b>'hierarchy'</b> based, wich means you can first scatter a bunsh of big trees, those big trees can then scatter smaller trees and so on, this works a bit more like nature in real life compared to just noise based scattering.</p>
+        <p>Details like tiny rocks and billboard grass can also be scattered via a density value. All scattered objects can <b>cull</b> eachoter so you don't have overlap.</p>
+        <p>Scattering is also <b>non invasive</b>, wich means you can manualy place your special trees without the scattering system removing them whenever it scatters again.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 13.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!---editor performance-->
+    <section>
+      <div class="txtwrap">
+        <h1>Adaptive Performance</h1>
+        <p>Atlas renders using a fixed resolution, this means that no mater how big your terrain is your <b>performance will stay thesame.</b></p>
+        <p>The preview box is split in 2 parts, on one side you have your total preview area wich shows your whole terrain at a lower resolution and on the other side you have a smaller square that renders at full resolution.</p>
+        <p>Drag the full resolution square around to get a glymps of what the terrain will look like at full resolution.</p>
+      </div>
+      <div class="imgwrap">
+        <img class="gi noselect" src="Images/Atlas Next Gen Terrain Editor For Unity Section 4.jpg" draggable="false" />
+      </div>
+    </section>
+
+    <!--compatibility-->
+    <section style="background-color: black;">
+      <div class="txtwrap">
+        <h1>Compatibility and Runtime Performance</h1>
+        <p>We put alot of effort in making sure Atlas does not go beyond its scope of terrain editing and most of all does not use any invasive techniques that would interfere with other tools. This makes it highly compatible and ensures your experiance is straight forward and to the point.</p>
+        <p>At the end of the day Atlas is mearly a terrain editor, all of its workings are done in the editor and its final result is applied onto your terrain solution. This means performance wise it has <b>no inpact</b> on your application or device compatibility. Atlas provides the tools you built your height and splatmaps with, the way this data is rendered is up to you or... most likely Unities built-in terrain.</p>
+        <p>We really want this tool to feel like it belongs inside Unity, as if it comes from the Unity developers themselves. We hope that our take on a next gen terrain editor will be appreciated and we look forward to support this tool and its users.<i class="fas fa-smile-beam" style="margin-left: 10px; color:white;"></i></p>
       </div>
 
-      <h1 style="text-align: center">
+    </section>
+
+    <!--discussion and mail-->
+    <section style="background-color: #000000;filter: invert(1);">
+     
+      <img class="noselect mwl" src="Images/Made with love.png" draggable="false" style="border: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(0.75) translateX(-200px);
+      "/>
+      
+      <h2 style="text-align: center; padding-bottom: 50px;">
         <i class="fas fa-thumbtack blinker" style="margin-right: 10px; display: inline-block"></i>
         <b class="blinker" style="margin-right: 10px; display: inline-block; animation-delay: 0.1s">discussion</b>
         <div class="blinker" style="margin-right: 10px; display: inline-block; animation-delay: 0.2s">directed to</div>
         <a
           class="blinker"
           style="margin-right: 10px; display: inline-block; animation-delay: 0.3s"
-          href="https://forum.unity.com/threads/atlas-next-gen-terrain-editor-essential-tool-for-creating-beautiful-worlds.1212453/"
+          href="https://forum.unity.com/threads/Atlas-next-gen-terrain-editor-essential-tool-for-creating-beautiful-worlds.1212453/"
           target="_blank"
           >unity thread</a
         >
-      </h1>
-    </section>
-    <section style="background-color: #093050;">
-  
+      </h2>
+
       <div class="mailboxwrap">
         <p style="text-align: center; margin-bottom: 30px">
-          <i class="fas fa-envelope" style="margin-right: 15px; color: white"></i>Leave your email to get notified on
-          releases and updates!
+          <i class="fas fa-envelope" style="margin-right: 15px; color: white"></i>Atlas is not released yet, Leave your email to get notified!
         </p>
         <div class="mailboxcontainer">
           <div id="mailboxinput" class="mailbox">
@@ -542,7 +821,9 @@
       </div>
 
     </section>
-    <section>
+    
+    <!--gallery-->
+    <section id="section3">
       <div class="row noselect">
         <div class="column">
           <img
@@ -674,14 +955,19 @@
         </div>
       </div>
     </section>
+
     <footer>
+      <h5 class="noselect nocookie">
+        <i class="fas fa-cookie-bite" style="margin-right: 10px"></i>we do not use cookies
+      </h5>
+      <p style="color: white; letter-spacing: 2px; text-transform: uppercase;">Atlas Terrain Editor 2022</p>
       <div class="socials noselect">
         <a
           class="social fab fa-discord"
           href="https://discord.com/channels/905019133710704660/905019134457307167"
           target="_blank"
         ></a>
-        <a class="social fab fa-instagram" href="https://www.instagram.com/atlas.terrain/" target="_blank"></a>
+        <a class="social fab fa-instagram" href="https://www.instagram.com/Atlas.terrain/" target="_blank"></a>
         <a
           class="social fab fa-facebook"
           href="https://www.facebook.com/ATLAS-terrain-105303281958886"
@@ -694,10 +980,8 @@
         ></a>
       </div>
 
-      <h5 class="noselect nocookie">
-        <i class="fas fa-cookie-bite" style="margin-right: 10px"></i>we do not use cookies
-      </h5>
     </footer>
+
     <div id="modal" class="modal noselect">
       <img class="modal-content" id="modalImage" draggable="false" />
       <span class="close">&times;</span>
@@ -705,7 +989,9 @@
       <a class="modalbutton left" id="modalleft"><i class="fas fa-arrow-circle-left"></i></a>
       <a class="modalbutton right" id="modalright"><i class="fas fa-arrow-circle-right"></i></a>
     </div>
+
     <i class="down fas fa-chevron-down"></i>
+    
     <script type="text/javascript">
       //pictures!!
 
@@ -904,5 +1190,6 @@
         }, 10);
       }
     </script>
+
   </body>
 </html>
