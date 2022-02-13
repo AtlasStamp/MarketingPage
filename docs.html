@@ -9,7 +9,7 @@
         content="Atlas Next Gen Nextgen Terrain Editor For Unity 3D Engine World Tool Plugin Asset Store Assetstore" />
     <meta name="description"
         content="Atlas Terrain tool for unity engine Brings non destructive stamp workflow to your unity terrains. Create huge and beautiful terrains quickly and easily." />
-    <title>Atlas Terrain Documentation</title>
+    <title>Atlas Terrain Editor Documentation</title>
     <noscript>
         <style>
             body {
@@ -236,9 +236,9 @@
         <a class="navlink" href="#section3">
             Placing stamps</a>
         <a class="navlink" href="#section4">
-            Apply Atlas to your terrain</a>
+            Applying Atlas to your terrain</a>
         <a class="navlink" href="#section5">
-            Create stamps from scratch</a>
+            Creating stamps from scratch</a>
         <a class="navlink" href="#section6">
             Splatmaps</a>
         <a class="navlink" href="#section7">
@@ -248,12 +248,11 @@
         <a class="navlink" href="#section9">
             Object scattering</a>
         <a class="navlink" href="#section10">
-            Detail layers</a>
-
-            <a class="navlink" href="#section11">
-                Multiple terrains</a>
-            <a class="navlink" href="#section12">
-                Creating your own stamp assets</a>
+            Detail scattering</a>
+        <a class="navlink" href="#section11">
+            Multiple terrains</a>
+        <a class="navlink" href="#section12">
+            Creating your own stamp assets</a>
         <a class="navlink" href="#section13">
             Atlas Unity Terrain Renderer properties</a>
         <a class="navlink" href="#section14">
@@ -266,7 +265,6 @@
             Scatter rule asset properties</a>
         <a class="navlink" href="#section18">
             Stamp asset properties</a>
-
         <a class="navlink" href="#section19">
             Tips and tricks</a>
     </nav>
@@ -282,13 +280,13 @@
 
             <ol>
                 <li>Open a Unity project.</li>
-                <li>In the menu bar click:<br>
+                <li>In the menu bar, click:<br>
                     Window > Package Manager</li>
-                <li>In the package window select MyAssets to find the Atlas asset store package.</li>
+                <li>In the package window select MyAssets and the <b>Atlas Terrain Editor</b> package.</li>
                 <li>Confirm and import.</li>
             </ol>
 
-            <h2>Initializing Atlas</h2>
+            <h2>Initialieztion of Atlas</h2>
 
             <ol>
                 <li><a href="https://docs.unity3d.com/Manual/terrain-UsingTerrains.html" target="blank">Create a Unity
@@ -298,9 +296,9 @@
                 <li><a href="https://docs.unity3d.com/Manual/class-TerrainLayer.html" target="blank">Set up Terrain
                         Layers.</a></li>
                 <li>Right click the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
-                <div class="info">Atlas will render your stamps in realtime within this preview volume</div>
+                <div class="info">Atlas will render your stamps in real time within this preview volume</div>
             </ol>
-            <img src="images/001initializeatlas.gif">
+            <img src="images/documentation/001initializeatlas.gif">
 
         </section>
 
@@ -313,15 +311,15 @@
                 <li>Click <span class="control">edit</span> to preview your stamps.</li>
                 <div class="info">The terrain will be rendered in two parts:</div>
                 <ul>
-                    <li class="info">Part 1 = entire terrain at lower resolution</li>
+                    <li class="info">Part 1 = all terrain at lower resolution</li>
                     <li class="info">Part 2 = a smaller square at full resolution</li>
                 </ul>
-                <li>You can move the smaller preview square around to the location you want to work on, by default it will automatically center on your view.</li>
+                <li>You can move the smaller preview square around to the location you want to work on, by default it will automatically centered on your view.</li>
                 <div class="info">You can increase/decrease its size by adjusting the "preview render resolution"
                     property</div>
             </ol>
 
-            <img src="images/002previewvolume.gif">
+            <img src="images/documentation/002previewvolume.gif">
 
         </section>
 
@@ -334,28 +332,28 @@
                 <li>Drag the prefab into your scene.</li>
                 <li>Position/rotate/scale the stamp to your liking.</li>
             </ol>
-            <img src="images/003stampprefab.gif">
+            <img src="images/documentation/003stampprefab.gif">
 
         </section>
 
         <section id="section4" class="main-section">
 
-            <h2>Apply Atlas to your terrain</h2>
+            <h2>Applying Atlas to your terrain</h2>
 
             <ol>
                 <li>Select the terrain.</li>
-                <li>Change the heightmap resolution settings to your liking.</li>
-                <li>Click <span class="control">render</span> or click stop edit on the preview volume.<br>
-                    <div class="info">atlas automatically renders when you stop editing the preview volume</div>
+                <li>Change the resolution of the terrain height map to your liking.</li>
+                <li>Click on <span class="control">render</span> or finish editing the preview volume.<br>
+                    <div class="info">atlas automatically renders when you finish editing the preview volume</div>
                 </li>
             </ol>
-            <img src="images/004applyingatlastoterrain.gif">
+            <img src="images/documentation/004applyingatlastoterrain.gif">
 
         </section>
 
         <section id="section5" class="main-section">
 
-            <h2>Create stamps from scratch</h2>
+            <h2>Creating stamps from scratch</h2>
 
             <ol>
                 <li>Make sure that you're in <a href="#section2">edit mode</a>.</li>
@@ -364,9 +362,9 @@
                 <li>Position the stamp somewhere inside the preview volume.</li>
                 <li>Select your stamp and assign a stamp asset.</li>
                 <li>Your stamp will now be visible.</li>
-                <li>If you want you can drag the stamp to your project panel to turn it into a prefab.</li>
+                <li>If you want you can drag the stamp into your project window to turn it into a prefab.</li>
             </ol>
-            <img src="images/005createstamp.gif">
+            <img src="images/documentation/005createstamp.gif">
 
         </section>
 
@@ -378,16 +376,16 @@
                 <li>Make sure that you're in <a href="#section2">edit mode</a>.</li>
                 <li>Select your stamp.</li>
                 <li>Click <span class="control">+</span> to add a new layer.</li>
-                <li>Click on preview mask.</li>
+                <li>Click preview mask.</li>
                 <li>Select one of the available masks as your input.</li>
-                <li>Select one of the terrain's splatmap layers as the target.</li>
-                <div class="info">The order of the targets reflects the order of the splatmaps that you configured for
+                <li>Select one of the splatmap layers of the terrain as target.</li>
+                <div class="info">The order of the targets reflects the order of the splatmaps you have configured for
                     your terrain</div>
                 <li>Change the layer properties to your liking.
-                    <div class="info">you can add more layers until you achieve the desired result</div>
+                    <div class="info">you can add more layers until you get the desired result</div>
                 </li>
             </ol>
-            <img src="images/006splatmaps.gif">
+            <img src="images/documentation/006splatmaps.gif">
 
         </section>
 
@@ -398,20 +396,20 @@
                 <li>Make sure that you're in <a href="#section2">edit mode</a></li>
                 <li>Select your stamp.</li>
                 <li>Click <span class="control">edit mask</span></li>
-                <li>Tweak the brush size and opacity.</li>
+                <li>Adjust the brush size and opacity.</li>
                 <li>Paint by clicking and dragging on the terrain within the bounds of the stamp.</li>
-                <li>To invert the paint brush hold <span class="keybind">SHIFT</span></li>
+                <li>To invert the brush, hold down <span class="keybind">SHIFT</span></li>
                 <li>Click <span class="control">apply</span> when done.</li>
             </ol>
-            <img src="images/007paintmask.gif">
+            <img src="images/documentation/007paintmask.gif">
 
             <p>If you're not satisfied with your results you can always.</p>
             <ul>
                 <li>Click <span class="control">cancel</span> to cancel editing.</li>
-                <li>Click <span class="control">reset</span> to revert to original mask that comes with the stamp asset.</li>
+                <li>Click <span class="control">reset</span> to revert to the original mask that comes with the stamp asset.</li>
                 <li>Click <span class="control">clear</span> to clear the mask and start from scratch.</li>
             </ul>
-            <img src="images/008undomask.gif">
+            <img src="images/documentation/008undomask.gif">
 
         </section>
 
@@ -420,18 +418,18 @@
             <h2>Spline stamps</h2>
             <Ol>
                 <li>Right click the hierarchy window and select:<br> Atlas &gt; Unity &gt; Spline Stamp</li>
-                <li>Assign one of the road stamp assets provided with the package.</li>
+                <li>Allocate one of the road stamp assets provided with the package.</li>
                 <li>Drag a point to move it horizontally.</li>
-                <li>Hold <span class="keybind">SHIFT</span> and <span class="keybind">LEFT CLICK</span> to add a point.
-                <li>Hold <span class="keybind">SHIFT</span> and <span class="keybind">LEFT CLICK</span> on the line to insert a point.</li>
-                <li>Hold <span class="keybind">SHIFT</span> and <span class="keybind">RIGHT CLICK</span> on a point to remove it.</li>
-                <li>Hold <span class="keybind">CTRL</span> and drag to move a point in 3D.</li>
-                <li>Hold <span class="keybind">SHIFT + CTRL</span> and drag to scale a point.</li>
+                <li>Hold down <span class="keybind">SHIFT</span> and <span class="keybind">LEFT CLICK</span> to add a point.
+                <li>Hold down <span class="keybind">SHIFT</span> and <span class="keybind">LEFT CLICK</span> on the line to insert a point.</li>
+                <li>Hold down <span class="keybind">SHIFT</span> and <span class="keybind">RIGHT CLICK</span> on a point to remove it.</li>
+                <li>Hold down <span class="keybind">CTRL</span> and drag to move a point in 3D.</li>
+                <li>Hold down <span class="keybind">SHIFT + CTRL</span> and drag to scale a point.</li>
             </Ol>
-            <img src="images/009createspline.gif">
+            <img src="images/documentation/009createspline.gif">
 
 
-            <h2>Adding detail to your spline stamp</h2>
+            <h2>Adding details to your spline stamp</h2>
 
             <ol>
                 <li>Subdivide.</li>
@@ -441,31 +439,31 @@
                 <li>Smooth lateral.</li>
                 <div class="info">averages all nodes lateral wise</div>
                 <li>Smooth scale.</li>
-                <div class="info">averages the scaling value of all nodes</div>
+                <div class="info">averages the scale value of all nodes</div>
                 <li>Unsubdivide.</li>
                 <div class="info">removes every other node</div>
             </ol>
-            <img src="images/010detailspline.gif">
+            <img src="images/documentation/010detailspline.gif">
 
             </ul>
 
             <h2>Aligning splines with the terrain</h2>
 
             <ol>
-                <li>Set heightmap opacity to 0 before dropping to floor so that the spline doesn't drop to its own
+                <li>Adjust the heightmap opacity to 0 before dropping to floor so that the spline doesn't drop to its own
                     height.</li>
-                <li>Click <span class="control">drop to floor
+                <li>Click on <span class="control">drop to floor
                 </li>
                 <li>Set heightmap opacity back to 1.</li>
             </ol>
-            <img src="images/011dropspline.gif">
+            <img src="images/documentation/011dropspline.gif">
 
             <h2>Spline to Mesh</h2>
             <ol>
-                <li>Tweak the mesh properties to your likings.</li>
+                <li>Adjust the mesh properties to your likings.</li>
                 <li>Click <span class="control">create mesh</span> to create it.</li>
             </ol>
-            <img src="images/012exportmesh.gif">
+            <img src="images/documentation/012exportmesh.gif">
 
         </section>
 
@@ -473,11 +471,10 @@
 
             <h2>Object Scattering</h2>
 
-            <div>Atlas has a scattering rule workflow where each rule is an asset on its own. These rules can be part of
+            <div>Atlas has a workflow of scatter rules where each rule is an asset on its own. These rules can be part of
                 a biome that can range from dense pine forests to desert fields or palm trees that are confined to a
                 beach area.<br>
-                <br>The basic scattering tool is able to place trees, grass and/or prefabs. If you prefer another
-                scattering tool Atlas will support it as long as the tool works on default Unity terrain.
+                <br>The basic scattering tool is able to place trees, grass and/or prefabs. If you prefer a different scattering tool, Atlas supports it as long as the tool works on default Unity terrain.
             </div>
 
 
@@ -492,7 +489,7 @@
                 <li>Make sure that scattering is enabled on the &quot;AtlasTerrainRenderer&quot; component.</li>
                 <li>Create a new element and assign the scatter rule asset you just created.</li>
             </ol>
-            <img src="images/013createscatterrule.gif">
+            <img src="images/documentation/013createscatterrule.gif">
 
             <h2>Configuring scatter rules</h2>
 
@@ -500,11 +497,11 @@
                 <li>Select the scatter rule asset.</li>
                 <li>Select the splatmap layer that you want to scatter on. In this example we'll be using Splat2.</li>
                 <li>Increase the min slider to finetune the threshold of asset placement.</li>
-                <li>Optional: block assets from spawning by entering a tag that the scatterer should avoid.</li>
-                <li>Tweak the slope and height sliders to your desire.</li>
+                <li>Optional: block spawning assets by entering a tag that the scatterer should avoid.</li>
+                <li>Adjust the slope and height sliders according to your wishes.</li>
                 <li>Set spacing to 50</li>
                 <li>Enable elf culling if you want objects to cull each other.</li>
-                <li>Add an element to the scatter stack and feed it some big tree prefabs.</li>
+                <li>Add an element to the scatter stack and allocate some big tree prefabs.</li>
             <ul>
                 <li>Set spawn radius to 25 and child count to 15</li>
             </ul>
@@ -525,37 +522,37 @@
                 <li>Set distance scale multiplier to 0.5</li>
             </ul>
             </ol>
-            <img src="images/014setupscatterrule.gif">
+            <img src="images/documentation/014setupscatterrule.gif">
 
-            <h2>What result will this configuration yield?</h2>
+            <h2>What will be the result of this configuration?</h2>
 
             <div>Select the terrain and click <span class="control">render</span> to see the scattering tool at work.</div>
             <ol>
-                <li>A layer of big trees will spawn with a spacing of roughly 50 meters between them.</li>
+                <li>A layer of big trees will spawn at a distance of about 50 meters between them.</li>
                 <li>Each of these trees will spawn 15 big child trees within a 25 meter radius.</li>
-                <li>These trees in turn will spawn 3 medium child trees within a 7.5 meter radius.</li>
+                <li>These trees, in turn, will spawn 3 medium child trees within a radius of 7.5 meters.</li>
                 <div class="info">medium trees will be scaled towards 80 % the original size based on the distance from parent</div>
-                <li>The medium trees will spawn 3 bushes 3 meter radius.</li>
-                <div class="info">trees will be scaled towards half the original size based on the distance from parent</div>
+                <li>The medium trees will spawn 3 bushes in a radius of 3 meters.</li>
+                <div class="info">trees will be scaled towards half the original size depending on the distance from the parent</div>
             </ol>
-            <img src="images/015renderscattering.gif">
+            <img src="images/documentation/015renderscattering.gif">
 
         </section>
 
         <section id="section10" class="main-section">
 
-            <h2>Detail layers</h2>
+            <h2>Detail scattering</h2>
 
             <div>In this example we'll be adding grass, feel free to use this for other things like small rocks and so on.</div>
             <ol>
                 <li>Create a scatterer rule asset right click the project window and select: <br>
                     Atlas &gt; Unity &gt; Scatter Rule Asset</li>
                 <li>Select the splatmap layer that you want to scatter on and put it on Splat1 (most likely grass).</li>
-                <li>Tweak the min and max sliders on the mask to finetune the threshold of asset placement.</li>
-                <li>Tweak the slope and height sliders to your desire.</li>
-                <li>Add an element to the detail stack and feed it some textures or meshes.</li>
+                <li>Adjust the min and max sliders on the mask to finetune the asset placement threshold.</li>
+                <li>Adjust the slope and height sliders according to your wishes.</li>
+                <li>Add an element to the detail stack and add some textures or meshes.</li>
                 <div class="info">When in HDRP you will have to assign meshes unless you have unlocked billboard grass</div>
-                <li>Choose the density</li>
+                <li>Set density value</li>
                 <li>Click <span class="control">render</span> on the AtlasTerrainRenderer component.</li>
                 </ul>
             </ol>
@@ -566,16 +563,16 @@
             <h2>Multiple terrains</h2>
             <ol>
                 <li>Right click the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
-                <div class="info">Atlas will render your stamps in realtime within this preview volume</div>
+                <div class="info">Atlas will render your stamps in real time within this preview volume</div>
                 <li><a href="https://docs.unity3d.com/Manual/terrain-UsingTerrains.html" target="blank">Create a Unity
                     terrain.</a></li>
                 <li>Add 3 new terrains using the Unity + button.</li>
                 <li>Select all 4 terrains and assign the &quot;AtlasUnityTerrainRenderer&quot; component.</li>
-                <li>Resize the preview volume, position it sothat it covers your 4 terrains and enter edit mode.</li>
+                <li>Resize the preview volume, position it so that it covers your 4 terrains and enter editing mode.</li>
                 <li>Place a stamp that spans the entire volume.</li>
-                <li>Exit edit mode to apply the stamp to all terrians.</li>
+                <li>Exit edit mode to apply the stamp to all terrains.</li>
             </ol>
-            <img src="images/018multipleterrains.gif">
+            <img src="images/documentation/018multipleterrains.gif">
 
         </section>
 
@@ -588,7 +585,7 @@
                     <li>Name your stamp asset.</li>
                 <li>Insert your textures in the correct slots.</li>
             </ol>
-            <img src="images/019createstamp.gif">
+            <img src="images/documentation/019createstamp.gif">
 
            
 
@@ -634,7 +631,7 @@
 
                 <tr>
                     <td>preview render resolution</td>
-                    <td>resolution while editing terrain, has inpact on performance while editing<br>
+                    <td>resolution while editing terrain, has effects on the performance during editing<br>
                     </td>
                 </tr>
                 <tr>
@@ -654,7 +651,7 @@
                 </tr>
                 <tr>
                     <td>preview accuracy from source</td>
-                    <td>copies the resolution settings from source terrain, or feed your own accuracy values</td>
+                    <td>copies the resolution settings from source terrain, or set your own accuracy values</td>
                 </tr>
             </table>
 
@@ -696,7 +693,7 @@
                 <caption class="tabtitle">Blend Modes</caption>
                 <tr>
                     <td>blend</td>
-                    <td>the value will lerp towerds target value</td>
+                    <td>the value will lerp towards target value</td>
                 </tr>
                 <tr>
                     <td>min</td>
@@ -798,7 +795,7 @@
                 </tr>
                 <tr>
                     <td>offset</td>
-                    <td>contols overall offset</td>
+                    <td>controls overall offset</td>
                 </tr>
                 <tr>
                     <td>invert</td>
@@ -998,7 +995,7 @@
                 </tr>
                 <tr>
                     <td>width scale min</td>
-                    <td>minumum value of the width scale</td>
+                    <td>minimum value of the width scale</td>
                 </tr>
                 <tr>
                     <td>width scale max</td>
@@ -1006,7 +1003,7 @@
                 </tr>
                 <tr>
                     <td>height scale min</td>
-                    <td>mimimum value of the height scale</td>
+                    <td>minimum value of the height scale</td>
                 </tr>
                 <tr>
                     <td>height scale max</td>
@@ -1083,7 +1080,7 @@
                 </tr>
                 <tr>
                     <td>road mask</td>
-                    <td>a special mask that is destined for road blending; usually this mask looks thesame as the opacity mask but narrower</td>
+                    <td>a special mask that is destined for road blending; usually this mask looks the same as the opacity mask but narrower</td>
                 </tr>
             </table>
 
@@ -1097,7 +1094,7 @@
             <ul>
                 <li>Preview render resolution: use this on the preview volume to control the resolution
                     while editing.</li>
-                <div class="info">Lower values yield more performance but will result in a smaller "full
+                <div class="info">Lower values give more performance but will result in a smaller "full
                     resolution square"</div>
 
                 <li>Set the input of the first layer on your stamp to none.</li>
@@ -1105,11 +1102,11 @@
                     ensures that no
                     splatmap data leaks through the stamp</div>
                 <li>The render order of your stamps is based on their position in the hierarchy.</li>
-                <li>Selecting stamps is easier through 3D gizmos.</li>
+                <li>The selection of stamps is easier through 3D gizmos.</li>
                 <div class="info"> If you want to select stamps in the scene
                     view make sure
                     they are visible and big enough</div>
-                <li>To easely smoother roads: subdivide twice, smooth it and unsubdivide again.</li>
+                <li>To easily create smoother roads: subdivide twice, smooth it and unsubdivide again.</li>
             </ul>
 
         </section>
