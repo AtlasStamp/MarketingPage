@@ -209,12 +209,32 @@
 
         @media only screen and (max-width: 800px) {
             .navitem {
-            font-size: 12px;
-            letter-spacing: 0px;
-            margin: 0px 0px;
-            padding: 25px 10px;
+                font-size: 12px;
+                letter-spacing: 0px;
+                margin: 0px 0px;
+                padding: 25px 10px;
             }
+
+            .nav {
+                display: none;
+            }
+
+            .sections {
+                min-width: unset !important;
+            }
+
+            .main-section {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .main-section img {
+                max-width: 350px;
+                max-height: 270px;
+            }
+
         }
+        
 
         /*---*/
 
@@ -280,7 +300,7 @@
 
             <ol>
                 <li>Open a Unity project.</li>
-                <li>In the menu bar, click:<br>
+                <li>In the menu bar, click on:<br>
                     Window > Package Manager</li>
                 <li>In the package window select MyAssets and the <b>Atlas Terrain Editor</b> package.</li>
                 <li>Confirm and import.</li>
@@ -295,7 +315,7 @@
                 <div class="info">This will bind the tool with the terrain</div>
                 <li><a href="https://docs.unity3d.com/Manual/class-TerrainLayer.html" target="blank">Set up Terrain
                         Layers.</a></li>
-                <li>Right click the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
+                <li>Right click on the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
                 <div class="info">Atlas will render your stamps in real time within this preview volume</div>
             </ol>
             <img src="images/documentation/001initializeatlas.gif">
@@ -357,7 +377,7 @@
 
             <ol>
                 <li>Make sure that you're in <a href="#section2">edit mode</a>.</li>
-                <li>Right click the hierarchy window and select: <br>
+                <li>Right click on the hierarchy window and select: <br>
                     Altas &gt; Unity &gt; Stamp</li>
                 <li>Position the stamp somewhere inside the preview volume.</li>
                 <li>Select your stamp and assign a stamp asset.</li>
@@ -376,12 +396,12 @@
                 <li>Make sure that you're in <a href="#section2">edit mode</a>.</li>
                 <li>Select your stamp.</li>
                 <li>Click <span class="control">+</span> to add a new layer.</li>
-                <li>Click preview mask.</li>
+                <li>Click Preview Mask.</li>
                 <li>Select one of the available masks as your input.</li>
-                <li>Select one of the splatmap layers of the terrain as target.</li>
-                <div class="info">The order of the targets reflects the order of the splatmaps you have configured for
+                <li>Select one of the Splatmap layers of the terrain as target.</li>
+                <div class="info">The order of the targets reflects the order of the Splatmaps you have configured for
                     your terrain</div>
-                <li>Change the layer properties to your liking.
+                <li>Change the layer properties according to your wishes.
                     <div class="info">you can add more layers until you get the desired result</div>
                 </li>
             </ol>
@@ -396,10 +416,10 @@
                 <li>Make sure that you're in <a href="#section2">edit mode</a></li>
                 <li>Select your stamp.</li>
                 <li>Click <span class="control">edit mask</span></li>
-                <li>Adjust the brush size and opacity.</li>
+                <li>Adjust the size and opacity of the brush.</li>
                 <li>Paint by clicking and dragging on the terrain within the bounds of the stamp.</li>
                 <li>To invert the brush, hold down <span class="keybind">SHIFT</span></li>
-                <li>Click <span class="control">apply</span> when done.</li>
+                <li>Click on <span class="control">apply</span> when you are finished.</li>
             </ol>
             <img src="images/documentation/007paintmask.gif">
 
@@ -417,7 +437,7 @@
 
             <h2>Spline stamps</h2>
             <Ol>
-                <li>Right click the hierarchy window and select:<br> Atlas &gt; Unity &gt; Spline Stamp</li>
+                <li>Right click on the hierarchy window and select:<br> Atlas &gt; Unity &gt; Spline Stamp</li>
                 <li>Allocate one of the road stamp assets provided with the package.</li>
                 <li>Drag a point to move it horizontally.</li>
                 <li>Hold down <span class="keybind">SHIFT</span> and <span class="keybind">LEFT CLICK</span> to add a point.
@@ -482,7 +502,7 @@
             <h2>Creating a scatter rule asset</h2>
 
             <ol>
-                <li>Create a scatterer rule asset right click the project window and select: <br>
+                <li>Create a scatterer rule asset right click on the project window and select: <br>
                     Atlas &gt; Unity &gt; Scatter Rule Asset</li>
            
                 <li>Select the terrain.</li>
@@ -495,12 +515,12 @@
 
             <ol>
                 <li>Select the scatter rule asset.</li>
-                <li>Select the splatmap layer that you want to scatter on. In this example we'll be using Splat2.</li>
+                <li>Select the Splatmap layer that you want to scatter on. In this example we'll be using Splat2.</li>
                 <li>Increase the min slider to finetune the threshold of asset placement.</li>
                 <li>Optional: block spawning assets by entering a tag that the scatterer should avoid.</li>
                 <li>Adjust the slope and height sliders according to your wishes.</li>
                 <li>Set spacing to 50</li>
-                <li>Enable elf culling if you want objects to cull each other.</li>
+                <li>Enable self culling if you want objects to cull each other.</li>
                 <li>Add an element to the scatter stack and allocate some big tree prefabs.</li>
             <ul>
                 <li>Set spawn radius to 25 and child count to 15</li>
@@ -545,9 +565,9 @@
 
             <div>In this example we'll be adding grass, feel free to use this for other things like small rocks and so on.</div>
             <ol>
-                <li>Create a scatterer rule asset right click the project window and select: <br>
+                <li>Create a scatterer rule asset right click on the project window and select: <br>
                     Atlas &gt; Unity &gt; Scatter Rule Asset</li>
-                <li>Select the splatmap layer that you want to scatter on and put it on Splat1 (most likely grass).</li>
+                <li>Select the Splatmap layer that you want to scatter on and put it on Splat1 (most likely grass).</li>
                 <li>Adjust the min and max sliders on the mask to finetune the asset placement threshold.</li>
                 <li>Adjust the slope and height sliders according to your wishes.</li>
                 <li>Add an element to the detail stack and add some textures or meshes.</li>
@@ -562,7 +582,7 @@
 
             <h2>Multiple terrains</h2>
             <ol>
-                <li>Right click the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
+                <li>Right click on the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
                 <div class="info">Atlas will render your stamps in real time within this preview volume</div>
                 <li><a href="https://docs.unity3d.com/Manual/terrain-UsingTerrains.html" target="blank">Create a Unity
                     terrain.</a></li>
@@ -580,7 +600,7 @@
 
             <h2>Creating your own stamp assets</h2>
             <ol>
-                <li>Right click the project window and select:<br>
+                <li>Right click on the project window and select:<br>
                     Create &gt; Atlas &gt; Unity &gt; Stamp Asset</li>
                     <li>Name your stamp asset.</li>
                 <li>Insert your textures in the correct slots.</li>
@@ -612,7 +632,7 @@
                 </tr>
                 <tr>
                     <td>export splat maps</td>
-                    <td>when enabled the splat map will be exported</td>
+                    <td>when enabled the splatmap will be exported</td>
                 </tr>
                 <tr>
                     <td>use scattering</td>
@@ -646,7 +666,7 @@
                 </tr>
                 <tr>
                     <td>terrain source</td>
-                    <td>the preview volume will copy stats like splatmap layers and resolution properties from this
+                    <td>the preview volume will copy stats like Splatmap layers and resolution properties from this
                         source terrain</td>
                 </tr>
                 <tr>
@@ -986,6 +1006,14 @@
                     <td>radius where detail will be removed to counter overlap</td>
                 </tr>
                 <tr>
+                    <td>spawn radius</td>
+                    <td>distance between spawned objects</td>
+                </tr>
+                <tr>
+                    <td>child count</td>
+                    <td>amount of children that will be spawned by the object</td>
+                </tr>
+                <tr>
                     <td>scale multiplier min</td>
                     <td>minimum value of the scale multiplier</td>
                 </tr>
@@ -1093,10 +1121,11 @@
 
             <ul>
                 <li>Preview render resolution: use this on the preview volume to control the resolution
-                    while editing.</li>
+                    while editing.</li>                    
                 <div class="info">Lower values give more performance but will result in a smaller "full
                     resolution square"</div>
-
+                    <li>Make sure to assign a source terrain to the preview volume.</li>                    
+                    <div class="info">without a source terrain the preview volume won't be able to copy your splatmap layers</div>
                 <li>Set the input of the first layer on your stamp to none.</li>
                 <div class="info">This makes a good base layer and
                     ensures that no
@@ -1106,16 +1135,18 @@
                 <div class="info"> If you want to select stamps in the scene
                     view make sure
                     they are visible and big enough</div>
-                <li>To easily create smoother roads: subdivide twice, smooth it and unsubdivide again.</li>
+                    <li>Spline stamps can't be scaled with the scale tool, use their properties instead.</li>
+                <li>To get rid of unwanted sharp edges of your stamp: use the <b>edge erase</b> property.</li>                    
+                <li>To create steeper mountains: increase the <b>power</b> slider in the height section of your stamp.</li>
+                <li>To easily create smoother roads: <b>subdivide</b> twice, <b>smooth</b> it and <b>unsubdivide</b> again.</li>
             </ul>
-
         </section>
 
     </div>
 
 
     <script type="text/javascript">
-        //window.onload = function () {
+        window.onload = function () {
 
             document.body.style.transitionDuration = '0s';
             document.body.style.opacity = 0;
@@ -1125,7 +1156,7 @@
                 document.body.style.opacity = 1;
             })
             
-        //}
+        }
     </script>
 
 </body>
