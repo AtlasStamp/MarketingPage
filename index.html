@@ -562,6 +562,37 @@
 
       /*---*/
 
+      .assetstorebutton {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        font-weight: bold;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        padding: 20px 40px;
+        z-index: 20;
+        cursor: pointer;
+        color:black;
+      }
+
+      .assetstorebutton:hover {
+        color:black;
+        filter:invert(1);
+      }
+
+      @media only screen and (max-width: 800px) {
+        
+        .assetstorebutton {
+          top: 78%;
+          font-size: 14px;
+          padding: 15px 10px;
+        }
+
+      }
+
     </style>
   </head>
   <body>
@@ -577,6 +608,7 @@
     <section style="background-color: black; padding: 0;" id="section1">
       <img src="Images/Atlas Next Gen Terrain Editor For Unity Thumbnail.png" style="width: 100%" draggable="false"></img>
       <h1 class="title noselect"><b>next gen terrain editor</b> for unity</h1>
+      <!--<a class="assetstorebutton noselect" href="https://assetstore.unity.com/preview/207568/685384">Available on Unity Asset Store</a>-->
       <div class="fade"></div>
     </section>
 
@@ -803,7 +835,7 @@
 
       <div class="mailboxwrap">
         <p style="text-align: center; margin-bottom: 30px">
-          <i class="fas fa-envelope" style="margin-right: 15px; color: white"></i>Atlas hasn't released yet, leave your email address to be notified!
+          <i class="fas fa-envelope" style="margin-right: 15px; color: white"></i>Subscribe to our newsletter for updates and news!
         </p>
         <div class="mailboxcontainer">
           <div id="mailboxinput" class="mailbox">
