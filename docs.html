@@ -10,13 +10,6 @@
     <meta name="description"
         content="Atlas Terrain tool for unity engine Brings non destructive stamp workflow to your unity terrains. Create huge and beautiful terrains quickly and easily." />
     <title>Atlas Terrain Editor Documentation</title>
-    <noscript>
-        <style>
-            body {
-            opacity: 1 !important;
-            }
-        </style>
-    </noscript>
     <style>
 
         body {
@@ -26,7 +19,6 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 30px;
-            opacity: 0;
             transition: 10s ease-out;
         }
 
@@ -39,7 +31,7 @@
             top: 0;
             left: 0;
             width: 300px;
-            height: calc( 100vh - 175px);
+            height: calc( 100vh - 100px);
             display: flex;
             flex-direction: column;
             background-color: #000000;
@@ -51,9 +43,9 @@
         }
 
         .navlink {
-            padding: 5px 0px;
+            padding: 3px 0px;
             text-decoration: none;
-            color: white;
+            color: rgb(116, 116, 116);
             display: list-item;
         }
 
@@ -204,37 +196,17 @@
         }
 
         .main-section, .nav {
-            margin-top: 75px;            
+            margin-top: 0px;            
         }
 
         @media only screen and (max-width: 800px) {
             .navitem {
-                font-size: 12px;
-                letter-spacing: 0px;
-                margin: 0px 0px;
-                padding: 25px 10px;
+            font-size: 12px;
+            letter-spacing: 0px;
+            margin: 0px 0px;
+            padding: 25px 10px;
             }
-
-            .nav {
-                display: none;
-            }
-
-            .sections {
-                min-width: unset !important;
-            }
-
-            .main-section {
-                padding-left: 25px;
-                padding-right: 25px;
-            }
-
-            .main-section img {
-                max-width: 350px;
-                max-height: 270px;
-            }
-
         }
-        
 
         /*---*/
 
@@ -244,10 +216,6 @@
 
 <body>
 
-    <div class="mainnav">
-        <a class="navitem navhome" href="index.html"></i>Home</a>
-    </div>
-  
     <nav class="nav">
         <a class="navlink" href="#section1">
             Get Started</a>
@@ -256,37 +224,45 @@
         <a class="navlink" href="#section3">
             Placing stamps</a>
         <a class="navlink" href="#section4">
-            Applying Atlas to your terrain</a>
+            Apply to terrain</a>
         <a class="navlink" href="#section5">
-            Creating stamps from scratch</a>
+            Quickly switch edit modes</a>
         <a class="navlink" href="#section6">
-            Splatmaps</a>
+            Create stamp prefabs</a>
         <a class="navlink" href="#section7">
-            Mask painting</a>
+            Splatmaps</a>
         <a class="navlink" href="#section8">
-            Spline stamps</a>
+            <b style="color:rgb(212, 152, 41)">⚠</b> Manual Brushing</a>
         <a class="navlink" href="#section9">
-            Object scattering</a>
+            Spline stamps</a>
         <a class="navlink" href="#section10">
-            Detail scattering</a>
+            Tree scattering</a>
         <a class="navlink" href="#section11">
-            Multiple terrains</a>
+            Grass scattering</a>
         <a class="navlink" href="#section12">
-            Creating your own stamp assets</a>
+            Multi terrains</a>
         <a class="navlink" href="#section13">
-            Atlas Unity Terrain Renderer properties</a>
+            Continue from existing terrains</a>
         <a class="navlink" href="#section14">
-            Atlas Preview Volume properties</a>
+            Creating stamps from scratch</a>
+        <a class="navlink" href="#section21">
+            Build optimization</a><br>
         <a class="navlink" href="#section15">
-            Stamp properties</a>
+            Atlas Unity Terrain Renderer properties</a>
         <a class="navlink" href="#section16">
-            Spline stamp properties</a>
+            Atlas Preview Volume properties</a>
         <a class="navlink" href="#section17">
-            Scatter rule asset properties</a>
+            Stamp properties</a>
         <a class="navlink" href="#section18">
-            Stamp asset properties</a>
+            Spline stamp properties</a>
         <a class="navlink" href="#section19">
-            Tips and tricks</a>
+            Scatter rule asset properties</a>
+        <a class="navlink" href="#section20">
+            Stamp asset properties</a><br>
+        <a class="navlink" href="#section22">
+            Tips, tricks and common questions</a>
+        <a class="navlink" href="#section23">
+            Help and Support</a>
     </nav>
 
     <div class="sections">
@@ -295,6 +271,9 @@
 
             <h2>Get Started</h2>
 
+            <br>
+            <div style="font-size: x-large;">If you prefer videos, check out our <a href="https://www.youtube.com/watch?v=xbMZh52qXNk&list=PL-AR2wTCJmSuY55Km1GD5LLrETjnHETdR">Atlas Beginner Tutorials</a></div>
+            <br>
 
             <p>To get started import the package as follows.</p>
 
@@ -315,11 +294,10 @@
                 <div class="info">This will bind the tool with the terrain</div>
                 <li><a href="https://docs.unity3d.com/Manual/class-TerrainLayer.html" target="blank">Set up Terrain
                         Layers.</a></li>
-                        <div class="info">recomended order [ <b>Grass1</b> | <b>Grass2</b> | <b>Soil1</b> | <b>Soil2</b> | <b>Rock1</b> | <b>Rock2</b> | <b>Sand</b> | <b>Snow</b> ]</div>
                 <li>Right click on the hierarchy window and select:<br> Atlas &gt; Unity &gt; Preview Volume</li>
                 <div class="info">Atlas will render your stamps in real time within this preview volume</div>
             </ol>
-            <img src="Images/Documentation/001initializeatlas.gif">
+            <img src="images/001initializeatlas.gif">
 
         </section>
 
@@ -340,7 +318,7 @@
                     property</div>
             </ol>
 
-            <img src="Images/Documentation/002previewvolume.gif">
+            <img src="images/002previewvolume.gif">
 
         </section>
 
@@ -353,7 +331,7 @@
                 <li>Drag the prefab into your scene.</li>
                 <li>Position/rotate/scale the stamp to your liking.</li>
             </ol>
-            <img src="Images/Documentation/003stampprefab.gif">
+            <img src="images/003stampprefab.gif">
 
         </section>
 
@@ -365,14 +343,29 @@
                 <li>Select the terrain.</li>
                 <li>Change the resolution of the terrain height map to your liking.</li>
                 <li>Click on <span class="control">render</span> or finish editing the preview volume.<br>
-                    <div class="info">atlas automatically renders when you finish editing the preview volume</div>
+                    <div class="info">Atlas automatically renders when you finish editing the preview volume</div>
                 </li>
             </ol>
-            <img src="Images/Documentation/004applyingatlastoterrain.gif">
+            <img src="images/004applyingatlastoterrain.gif">
 
         </section>
 
         <section id="section5" class="main-section">
+
+            <h2>Quickly switch edit modes</h2>
+            <div class="info"><b>requires Update 1.04 and 2022.2+</b></div>
+            <br>
+            <div>Atlas comes with its own overlay menu, see <a href="https://docs.unity3d.com/Manual/manage-overlay-configurations.html">here</a> how to configure it.</div>
+            <ol>
+                <li>In the Scene view, press the <span class="control">`</span> key to display the Overlays menu.</li>
+                <li>In the dropdown in the Overlays menu, select <b>Atlas</b>.</li>
+                <div class="info">this feature requires unity 2022.2 or higher</div>
+            </ol>
+            <div>Once the overlay menu is present you can use the buttons in there to switch between edit modes.</div>
+
+        </section>
+
+        <section id="section6" class="main-section">
 
             <h2>Creating stamps from scratch</h2>
 
@@ -385,11 +378,11 @@
                 <li>Your stamp will now be visible.</li>
                 <li>If you want you can drag the stamp into your project window to turn it into a prefab.</li>
             </ol>
-            <img src="Images/Documentation/005createstamp.gif">
+            <img src="images/005createstamp.gif">
 
         </section>
 
-        <section id="section6" class="main-section">
+        <section id="section7" class="main-section">
 
             <h2>Splatmaps</h2>
 
@@ -406,13 +399,15 @@
                     <div class="info">you can add more layers until you get the desired result</div>
                 </li>
             </ol>
-            <img src="Images/Documentation/006splatmaps.gif">
+            <img src="images/006splatmaps.gif">
 
         </section>
 
-        <section id="section7" class="main-section">
+        <section id="section8" class="main-section">
 
-            <h2>Mask painting</h2>
+            <h2>Manual painting / Brushing</h2>
+            <div>Atlas has it's own paint brush you can use to paint height and splatmaps with, everyting that can be done with the built-in unity brushes can be done via the Atlas brush in a non destructive way.</div>
+            <div class="info" style="color:rgb(179, 144, 79)">Painted areas with the built-in unity brushes will be overwritten, Atlas only sees the stamps, it can't track what you do outside edit mode.</div>
             <ol>
                 <li>Make sure that you're in <a href="#section2">edit mode</a></li>
                 <li>Select your stamp.</li>
@@ -422,7 +417,7 @@
                 <li>To invert the brush, hold down <span class="keybind">SHIFT</span></li>
                 <li>Click on <span class="control">apply</span> when you are finished.</li>
             </ol>
-            <img src="Images/Documentation/007paintmask.gif">
+            <img src="images/007paintmask.gif">
 
             <p>If you're not satisfied with your results you can always.</p>
             <ul>
@@ -430,11 +425,11 @@
                 <li>Click <span class="control">reset</span> to revert to the original mask that comes with the stamp asset.</li>
                 <li>Click <span class="control">clear</span> to clear the mask and start from scratch.</li>
             </ul>
-            <img src="Images/Documentation/008undomask.gif">
+            <img src="images/008undomask.gif">
 
         </section>
 
-        <section id="section8" class="main-section">
+        <section id="section9" class="main-section">
 
             <h2>Spline stamps</h2>
             <Ol>
@@ -447,7 +442,7 @@
                 <li>Hold down <span class="keybind">CTRL</span> and drag to move a point in 3D.</li>
                 <li>Hold down <span class="keybind">SHIFT + CTRL</span> and drag to scale a point.</li>
             </Ol>
-            <img src="Images/Documentation/009createspline.gif">
+            <img src="images/009createspline.gif">
 
 
             <h2>Adding details to your spline stamp</h2>
@@ -464,7 +459,7 @@
                 <li>Unsubdivide.</li>
                 <div class="info">removes every other node</div>
             </ol>
-            <img src="Images/Documentation/010detailspline.gif">
+            <img src="images/010detailspline.gif">
 
             </ul>
 
@@ -477,20 +472,20 @@
                 </li>
                 <li>Set heightmap opacity back to 1.</li>
             </ol>
-            <img src="Images/Documentation/011dropspline.gif">
+            <img src="images/011dropspline.gif">
 
             <h2>Spline to Mesh</h2>
             <ol>
                 <li>Adjust the mesh properties to your likings.</li>
                 <li>Click <span class="control">create mesh</span> to create it.</li>
             </ol>
-            <img src="Images/Documentation/012exportmesh.gif">
+            <img src="images/012exportmesh.gif">
 
         </section>
 
-        <section id="section9" class="main-section">
+        <section id="section10" class="main-section">
 
-            <h2>Object Scattering</h2>
+            <h2>Tree Scattering</h2>
 
             <div>Atlas has a workflow of scatter rules where each rule is an asset on its own. These rules can be part of
                 a biome that can range from dense pine forests to desert fields or palm trees that are confined to a
@@ -510,7 +505,7 @@
                 <li>Make sure that scattering is enabled on the &quot;AtlasTerrainRenderer&quot; component.</li>
                 <li>Create a new element and assign the scatter rule asset you just created.</li>
             </ol>
-            <img src="Images/Documentation/013createscatterrule.gif">
+            <img src="images/013createscatterrule.gif">
 
             <h2>Configuring scatter rules</h2>
 
@@ -543,7 +538,7 @@
                 <li>Set distance scale multiplier to 0.5</li>
             </ul>
             </ol>
-            <img src="Images/Documentation/014setupscatterrule.gif">
+            <img src="images/014setupscatterrule.gif">
 
             <h2>What will be the result of this configuration?</h2>
 
@@ -556,13 +551,13 @@
                 <li>The medium trees will spawn 3 bushes in a radius of 3 meters.</li>
                 <div class="info">trees will be scaled towards half the original size depending on the distance from the parent</div>
             </ol>
-            <img src="Images/Documentation/015renderscattering.gif">
+            <img src="images/015renderscattering.gif">
 
         </section>
 
-        <section id="section10" class="main-section">
+        <section id="section11" class="main-section">
 
-            <h2>Detail scattering</h2>
+            <h2>Grass scattering</h2>
 
             <div>In this example we'll be adding grass, feel free to use this for other things like small rocks and so on.</div>
             <ol>
@@ -579,7 +574,8 @@
             </ol>
 
         </section>
-        <section id="section11" class="main-section">
+        
+        <section id="section12" class="main-section">
 
             <h2>Multiple terrains</h2>
             <ol>
@@ -593,11 +589,32 @@
                 <li>Place a stamp that spans the entire volume.</li>
                 <li>Exit edit mode to apply the stamp to all terrains.</li>
             </ol>
-            <img src="Images/Documentation/018multipleterrains.gif">
+            <img src="images/018multipleterrains.gif">
 
         </section>
 
-        <section id="section12" class="main-section">
+        <section id="section13" class="main-section">
+
+            <h2>Continue from existing Terrains</h2>
+            <div class="info"><b>requires Update 1.04</b></div>
+            <br>
+            <div>In order to continue from existing terrains we need to convert them to stamps first. We can then use those stamps as our base and build ontop from there.</div>
+            <div class="info">if you do not have or want to update to 1.04, feel free to reach out to get the converter</div>
+            
+            <ol>
+                <li>Right click on the project window and select:<br> Create &gt; Atlas &gt; Unity &gt; Atlas Converter Asset</li>
+                <li>Select the <b>terrainData</b> you want to convert to a stamp.</li>
+                <li>Select <b>use masking</b> if you would also like a mask with the stamp.</li>
+                <li>Select <b>normalize height</b> if you want the minimum and maximum height values to be 0 and 1 on the stamp.</li>
+                <li>Press <span class="control">Convert</span></li>
+                <li>A stamp asset will now be created based on the terrain data that you entered.</li>
+                <div class="info">you can keep converting from the terrain data and the stamp will automatically update along.</div>
+                <li>Now you can use this as your first stamp, and thus continue from existing terrain.</li>
+            </ol>
+
+        </section>
+
+        <section id="section14" class="main-section">
 
             <h2>Creating your own stamp assets</h2>
             <ol>
@@ -605,14 +622,38 @@
                     Create &gt; Atlas &gt; Unity &gt; Stamp Asset</li>
                     <li>Name your stamp asset.</li>
                 <li>Insert your textures in the correct slots.</li>
+                <div class="info">Not all slots require a texture for the stamp to work.<br>For more information on what each textures does take a look at the <a href="#section20">
+                    Stamp asset properties</a> section.</div>
             </ol>
-            <img src="Images/Documentation/019createstamp.gif">
-
+            <img src="images/019createstamp.gif">
+            <ul>
+                <li>Since Update <b>1.04</b> You can <b>pack</b> and <b>unpack</b> textures from the stamp assets.</li>
+                <div class="info">This means that your textures can become part of the stamp asset itself, the same way as the stamps that come with Atlas.</div>
+                <li>Since Update <b>1.04</b> You can combine multiple grayscale images into a RGBA texture.</li>
+                <div class="info">This can come in handy if you exported your flow, slope, deposition, etc maps as seperat grayscale images.</div>
+                <li>Since Update <b>1.04</b> You can automaticaly convert textures to 16 or 32 bit that need it.</li>
+            </ul>
+            <div>The textures to put in the stamps can be created or most likely <b>Generated</b> in many ways.<br>here is a list of programs that can help you with that.</div>
+            <ul>
+                <a href="https://quadspinner.com/">Gaea</a> | 
+                <a href="https://www.world-creator.com/">World Creator</a> | 
+                <a href="https://www.world-machine.com/">World Machine</a> | 
+                <a href= "https://www.adobe.com/be_en/products/photoshop.html">Photoshop</a>
+            </ul>
            
-
         </section>
 
-        <section id="section13" class="main-section">
+        <section id="section21" class="main-section">
+
+            <h2>Build optimization</h2>
+
+            <div>Atlas uses stamps to render your terrain, each stamp has multiple textures that make this process possible.<br>This means that when the stamps are included in your scene they will be build along with the game, and thus will increase the build size.<br><br>If you won't use Atlas to change the terrain at runtime they can be removed from the scene, when they are applied to the terrain their job is done...we have the terrain so... no stamps needed in our build.<br><br>To do this, you can move all Atlas related gameobjects to a seperat scene that is not being build, this way you still have all your stamps and can still change your terrain whenever you like.</div>
+            <br>
+            <div class="info">Since <b>update 1.04</b> we can now go to <b>project settings > Atlas</b>, and enable the <b>Strip stamps from build</b> option, this will remove the stamps when you build your game and also when entering playmode. When using this method you won't need to seperate Atlas related gameobjects to another scene.</div>
+        
+        </section>
+
+        <section id="section15" class="main-section">
 
             <h2>Atlas Unity Terrain Renderer properties</h2>
 
@@ -643,7 +684,7 @@
 
         </section>
 
-        <section id="section14" class="main-section">
+        <section id="section16" class="main-section">
 
             <h2>Atlas Preview Volume properties</h2>
 
@@ -678,8 +719,7 @@
 
         </section>
 
-
-        <section id="section15" class="main-section">
+        <section id="section17" class="main-section">
 
             <h2>Stamp properties</h2>
 
@@ -826,7 +866,7 @@
 
         </section>
 
-        <section id="section16" class="main-section">
+        <section id="section18" class="main-section">
 
             <h2>Spline stamp properties</h2>
 
@@ -918,7 +958,7 @@
 
         </section>
 
-        <section id="section17" class="main-section">
+        <section id="section19" class="main-section">
 
             <h2>Scatter rule asset properties</h2>
 
@@ -1084,7 +1124,8 @@
             </table>
 
         </section>
-        <section id="section18" class="main-section">
+
+        <section id="section20" class="main-section">
 
             <h2>Stamp asset properties</h2>
 
@@ -1093,32 +1134,31 @@
                 </caption>
                 <tr>
                     <td>height</td>
-                    <td>heightmap preferably in 32-bit</td>
-                </tr>
-                <tr>
-                    <td>color</td>
-                    <td>color map</td>
+                    <td>This is a <b>grayscale</b> image representing a heightmap, white is maximum height, black is minimum height, this image is prefered as <b>16-bit</b> or <b>32-bit</b>.</td>
                 </tr>
                 <tr>
                     <td>mask</td>
-                    <td>determines overall opacity of the stamp</td>
+                    <td>This is a <b>grayscale</b> image which determines the overall opacity of the stamp, white means the stamp will apply fully, black means the stamp will not apply, this image is used so stamps can blend gracefully with eachother. this map is prefered as <b>16-bit</b> or <b>32-bit</b>.</td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>This is an <b>RGB</b> texture used as overall color of the terrain, by default unity does not support a global color map, but some shaders do support it so this is why our stamps include the option to build, and then export a color map.</td>
                 </tr>
                 <tr>
                     <td>splat 1 & splat 2</td>
-                    <td>each splat texture has 4 channels at your disposal</td>
+                    <td>these are <b>RGBA</b> textures, each channel can draw to a terrain layer assigned to the terrain. Not every channel needs to be used.<br>These channels can contain anything you want!<br><br>For our stamps we used <b>erosion - rock map - slope - texture</b><br><ol><b>erosion</b> represents the flow of soil due to rain<br><b>rock map</b> represents detailed parts of exposed rocks mainly based on slope and some noise<br><b>slope</b> provides a mask that is black where the height is horizontal and white where it is vertical<br><b>texture</b> represents a combination of soil deposition and flow in general it generates a mask that is usefull for breaking repeating patterns.</ol>Some other use cases would be a <b>helipad symbol</b> for example, or a <b>pentagram</b>, or the <b>bottom of craters</b>, or the top of a mountain needing <b>snow</b><br><br>The splat textures can use a <b>naming convention</b> like so: "Erosion-Slope-Snow-Rock.png" , the dropdown will then display those names.</td>
                 </tr>
                 <tr>
                     <td>road mask</td>
-                    <td>a special mask that is destined for road blending; usually this mask looks the same as the opacity mask but narrower</td>
+                    <td>This is a <b>grayscale</b> image, It's used in rare cases where a road that has higher sides needs to blend with other roads, making a joined section or a cross road. Usually this texture needs to be the same as the <b>Mask</b>, but a little narrower. This image is prefered as <b>16-bit</b> or <b>32-bit</b>.</td>
                 </tr>
             </table>
 
         </section>
        
+        <section id="section22" class="main-section">
 
-        <section id="section19" class="main-section">
-
-            <h2>Tips and tricks</h2>
+            <h2>Tips, tricks and common questions</h2>
 
             <ul>
                 <li>Preview render resolution: use this on the preview volume to control the resolution
@@ -1140,25 +1180,20 @@
                 <li>To get rid of unwanted sharp edges of your stamp: use the <b>edge erase</b> property.</li>                    
                 <li>To create steeper mountains: increase the <b>power</b> slider in the height section of your stamp.</li>
                 <li>To easily create smoother roads: <b>subdivide</b> twice, <b>smooth</b> it and <b>unsubdivide</b> again.</li>
+                <li>If you have <b>strayations</b> on the terrain it is most likely due to 8 bit heightmaps or masks.</li>
+                <li>If the terrain is <b>invisible</b> check if the <b>draw</b> option is enabled in the terrain settings. (gear icon)</li>
+                <li>If you have sharp edges in rectangular shape it's most likely a stamp that does not have a perfect mask texture assigned, you can get rid of these hard edges by using the <b>edge erase</b> option, found on the stamp.</li>
+                <li>If you can't <b>drag a stamp into the scene</b> you are probably dragging a stamp asset instead of a prefab.</li>
             </ul>
         </section>
 
+        <section id="section23" class="main-section">
+            <h2>Help and support</h2>
+            <div>Visit our <a href="https://discord.gg/yZrgHfpX9c">Discord</a> for live support, our team is eager to help you almost every day of the week.</div>
+            <div>Don't like discord? visit the <a href="https://forum.unity.com/threads/released-atlas-next-gen-terrain-editor-essential-tool-for-creating-beautiful-worlds.1212453/page-2">Forums</a> and ask away, support is a bit faster on discord though due to the notification system.</div>
+        </section>
+
     </div>
-
-
-    <script type="text/javascript">
-        //window.onload = function () {
-
-            document.body.style.transitionDuration = '0s';
-            document.body.style.opacity = 0;
-
-            setTimeout(() => {
-                document.body.style.transitionDuration = '1s';
-                document.body.style.opacity = 1;
-            })
-            
-        //}
-    </script>
 
 </body>
 
